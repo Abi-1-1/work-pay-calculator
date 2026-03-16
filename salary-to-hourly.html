@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salary to Hourly Calculator | Work Pay Calculator</title>
+    <meta name="description" content="Convert annual salary into hourly pay based on your work schedule.">
+    <meta name="keywords" content="salary to hourly calculator, annual salary calculator, hourly pay estimator">
+    <meta name="author" content="Work Pay Calculator">
+    <link rel="canonical" href="https://your-site-url.com/salary-to-hourly.html">
+
+    <meta property="og:title" content="Salary to Hourly Calculator">
+    <meta property="og:description" content="Convert annual salary into estimated hourly pay.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://your-site-url.com/salary-to-hourly.html">
+    <meta property="og:site_name" content="Work Pay Calculator">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Salary to Hourly Calculator">
+    <meta name="twitter:description" content="Convert annual salary into hourly pay.">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container">
+            <a href="index.html" class="logo">Work Pay Calculator</a>
+
+            <nav class="nav">
+                <a href="index.html">Home</a>
+                <a href="hourly-to-salary.html">Hourly to Salary</a>
+                <a class="active" href="salary-to-hourly.html">Salary to Hourly</a>
+                <a href="overtime-calculator.html">Overtime</a>
+                <a href="work-hours-calculator.html">Work Hours</a>
+                <a href="about.html">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="calculator-page">
+            <div class="container">
+                <div class="calculator-box">
+                    <h1>Salary to Hourly Calculator</h1>
+                    <p class="calculator-intro">
+                        Enter your annual salary, hours per week, and weeks per year
+                        to estimate your hourly pay.
+                    </p>
+
+                    <div class="form-group">
+                        <label for="salaryTaxRate">Estimated Tax Rate for Your State/Area (%)</label>
+                        <input type="number" id="salaryTaxRate" placeholder="Enter your tax rate" value="20">
+                        <p class="field-note">Enter your estimated tax rate based on your state or local area. This is only a simple estimate.</p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="annualSalaryInput">Annual Salary ($)</label>
+                        <input type="number" id="annualSalaryInput" placeholder="Enter annual salary">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="salaryHoursPerWeek">Hours per Week</label>
+                        <input type="number" id="salaryHoursPerWeek" placeholder="Enter hours per week">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="salaryWeeksPerYear">Weeks per Year</label>
+                        <input type="number" id="salaryWeeksPerYear" placeholder="Enter weeks per year" value="52">
+                    </div>
+
+                    <div class="button-row">
+                        <button id="salaryCalculateButton">Calculate</button>
+                        <button type="button" class="secondary-action" id="resetSalaryButton">Reset</button>
+                    </div>
+
+                    <div class="result-box">
+                        <h2>Result</h2>
+                        <p><strong>Estimated Hourly Pay (Before Tax):</strong> <span id="hourlyPayResult">$0.00</span></p>
+                        <p><strong>Estimated Hourly Pay (After Tax):</strong> <span id="hourlyPayAfterTaxResult">$0.00</span></p>
+                    </div>
+                </div>
+                <div class="content-box calculator-content">
+                    <h2>How to convert salary to hourly pay</h2>
+                    <p>
+                        To estimate hourly pay from annual salary, divide your yearly salary
+                        by the total number of hours worked in a year.
+                    </p>
+
+                    <p>
+                        For example, if your annual salary is $52,000 and you work 40 hours per week
+                        for 52 weeks per year, your estimated hourly pay is $25.
+                    </p>
+
+                    <h2>Formula</h2>
+                    <p><strong>Annual Salary ÷ (Hours per Week × Weeks per Year) = Hourly Pay</strong></p>
+
+                    <h2>Why use this calculator?</h2>
+                    <p>
+                        This tool helps compare salaried jobs with hourly jobs and gives a quick estimate
+                        of how much your time is worth per hour.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <div class="footer-brand">Work Pay Calculator</div>
+                <p class="footer-text">Free salary and work calculators for the USA.</p>
+            </div>
+
+            <div>
+                <div class="footer-title">Pages</div>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms.html">Terms</a>
+            </div>
+
+            <div>
+                <div class="footer-title">Calculators</div>
+                <a href="hourly-to-salary.html">Hourly to Salary</a>
+                <a href="salary-to-hourly.html">Salary to Hourly</a>
+                <a href="overtime-calculator.html">Overtime</a>
+                <a href="work-hours-calculator.html">Work Hours</a>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <p>© 2026 Work Pay Calculator. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

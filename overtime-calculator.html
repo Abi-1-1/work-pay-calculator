@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overtime Pay Calculator | Work Pay Calculator</title>
+    <meta name="description" content="Estimate overtime pay using hourly rate, overtime hours, and overtime multiplier.">
+    <meta name="keywords" content="overtime calculator, overtime pay calculator, overtime pay estimate">
+    <meta name="author" content="Work Pay Calculator">
+    <link rel="canonical" href="https://your-site-url.com/overtime-calculator.html">
+
+    <meta property="og:title" content="Overtime Pay Calculator">
+    <meta property="og:description" content="Estimate overtime pay based on hourly rate and overtime hours.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://your-site-url.com/overtime-calculator.html">
+    <meta property="og:site_name" content="Work Pay Calculator">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Overtime Pay Calculator">
+    <meta name="twitter:description" content="Estimate overtime pay quickly and easily.">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container">
+            <a href="index.html" class="logo">Work Pay Calculator</a>
+
+            <nav class="nav">
+                <a href="index.html">Home</a>
+                <a href="hourly-to-salary.html">Hourly to Salary</a>
+                <a href="salary-to-hourly.html">Salary to Hourly</a>
+                <a class="active" href="overtime-calculator.html">Overtime</a>
+                <a href="work-hours-calculator.html">Work Hours</a>
+                <a href="about.html">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="calculator-page">
+            <div class="container">
+                <div class="calculator-box">
+                    <h1>Overtime Pay Calculator</h1>
+                    <p class="calculator-intro">
+                        Enter your hourly rate, overtime hours, and overtime multiplier
+                        to estimate your overtime pay.
+                    </p>
+
+                    <div class="form-group">
+                        <label for="overtimeTaxRate">Estimated Tax Rate for Your State/Area (%)</label>
+                        <input type="number" id="overtimeTaxRate" placeholder="Enter your tax rate" value="20">
+                        <p class="field-note">Enter your estimated tax rate based on your state or local area. This is only a simple estimate.</p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="overtimeHourlyRate">Hourly Rate ($)</label>
+                        <input type="number" id="overtimeHourlyRate" placeholder="Enter hourly rate">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="overtimeHours">Overtime Hours</label>
+                        <input type="number" id="overtimeHours" placeholder="Enter overtime hours">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="overtimeMultiplier">Overtime Multiplier</label>
+                        <input type="number" id="overtimeMultiplier" placeholder="Example: 1.5" value="1.5" step="0.1">
+                    </div>
+
+                    <div class="button-row">
+                        <button id="overtimeCalculateButton">Calculate</button>
+                        <button type="button" class="secondary-action" id="resetOvertimeButton">Reset</button>
+                    </div>
+
+                    <div class="result-box">
+                        <h2>Result</h2>
+                        <p><strong>Estimated Overtime Pay (Before Tax):</strong> <span id="overtimePayResult">$0.00</span></p>
+                        <p><strong>Estimated Overtime Pay (After Tax):</strong> <span id="overtimePayAfterTaxResult">$0.00</span></p>
+                    </div>
+                </div>
+
+                <div class="content-box calculator-content">
+                    <h2>How to calculate overtime pay</h2>
+                    <p>
+                        Overtime pay is usually calculated by multiplying your hourly rate
+                        by an overtime multiplier and then by the number of overtime hours worked.
+                    </p>
+
+                    <p>
+                        For example, if you earn $20 per hour, work 10 overtime hours,
+                        and your overtime rate is 1.5x, your overtime pay would be $300.
+                    </p>
+
+                    <h2>Formula</h2>
+                    <p><strong>Hourly Rate × Overtime Multiplier × Overtime Hours = Overtime Pay</strong></p>
+
+                    <h2>Important note</h2>
+                    <p>
+                        Overtime rules may vary depending on employer policies, state laws,
+                        and whether taxes or bonuses are included.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <div class="footer-brand">Work Pay Calculator</div>
+                <p class="footer-text">Free salary and work calculators for the USA.</p>
+            </div>
+
+            <div>
+                <div class="footer-title">Pages</div>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms.html">Terms</a>
+            </div>
+
+            <div>
+                <div class="footer-title">Calculators</div>
+                <a href="hourly-to-salary.html">Hourly to Salary</a>
+                <a href="salary-to-hourly.html">Salary to Hourly</a>
+                <a href="overtime-calculator.html">Overtime</a>
+                <a href="work-hours-calculator.html">Work Hours</a>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <p>© 2026 Work Pay Calculator. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

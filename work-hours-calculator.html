@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work Hours Calculator | Work Pay Calculator</title>
+    <meta name="description" content="Calculate total work hours and estimated pay based on hours per day, days worked, and hourly rate.">
+    <meta name="keywords" content="work hours calculator, hours worked calculator, pay calculator">
+    <meta name="author" content="Work Pay Calculator">
+    <link rel="canonical" href="https://your-site-url.com/work-hours-calculator.html">
+
+    <meta property="og:title" content="Work Hours Calculator">
+    <meta property="og:description" content="Calculate total work hours and estimated pay.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://your-site-url.com/work-hours-calculator.html">
+    <meta property="og:site_name" content="Work Pay Calculator">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Work Hours Calculator">
+    <meta name="twitter:description" content="Calculate hours worked and estimated total pay.">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container">
+            <a href="index.html" class="logo">Work Pay Calculator</a>
+
+            <nav class="nav">
+                <a href="index.html">Home</a>
+                <a href="hourly-to-salary.html">Hourly to Salary</a>
+                <a href="salary-to-hourly.html">Salary to Hourly</a>
+                <a href="overtime-calculator.html">Overtime</a>
+                <a class="active" href="work-hours-calculator.html">Work Hours</a>
+                <a href="about.html">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="calculator-page">
+            <div class="container">
+                <div class="calculator-box">
+                    <h1>Work Hours Calculator</h1>
+                    <p class="calculator-intro">
+                        Enter hours per day, number of days worked, and hourly rate
+                        to estimate total hours and total pay.
+                    </p>
+
+                    <div class="form-group">
+                        <label for="workTaxRate">Estimated Tax Rate for Your State/Area (%)</label>
+                        <input type="number" id="workTaxRate" placeholder="Enter your tax rate" value="20">
+                        <p class="field-note">Enter your estimated tax rate based on your state or local area. This is only a simple estimate.</p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="hoursPerDay">Hours per Day</label>
+                        <input type="number" id="hoursPerDay" placeholder="Enter hours per day">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="daysWorked">Days Worked</label>
+                        <input type="number" id="daysWorked" placeholder="Enter number of days">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="workHourlyRate">Hourly Rate ($)</label>
+                        <input type="number" id="workHourlyRate" placeholder="Enter hourly rate">
+                    </div>
+
+                    <div class="button-row">
+                        <button id="workHoursCalculateButton">Calculate</button>
+                        <button type="button" class="secondary-action" id="resetWorkHoursButton">Reset</button>
+                    </div>
+
+                    <div class="result-box">
+                        <h2>Results</h2>
+                        <p><strong>Total Hours:</strong> <span id="totalHoursResult">0.00</span></p>
+                        <p><strong>Estimated Total Pay (Before Tax):</strong> <span id="totalPayResult">$0.00</span></p>
+                        <p><strong>Estimated Total Pay (After Tax):</strong> <span id="totalPayAfterTaxResult">$0.00</span></p>
+                    </div>
+                </div>
+
+                <div class="content-box calculator-content">
+                    <h2>How to calculate work hours</h2>
+                    <p>
+                        To estimate total work hours, multiply the number of hours worked per day
+                        by the total number of days worked.
+                    </p>
+
+                    <p>
+                        To estimate total pay, multiply total hours by your hourly rate.
+                    </p>
+
+                    <h2>Formula</h2>
+                    <p><strong>Hours per Day × Days Worked = Total Hours</strong></p>
+                    <p><strong>Total Hours × Hourly Rate = Total Pay</strong></p>
+
+                    <h2>Why use this calculator?</h2>
+                    <p>
+                        This tool helps estimate hours and earnings for part-time work,
+                        shifts, freelance jobs, and short work periods.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <div class="footer-brand">Work Pay Calculator</div>
+                <p class="footer-text">Free salary and work calculators for the USA.</p>
+            </div>
+
+            <div>
+                <div class="footer-title">Pages</div>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms.html">Terms</a>
+            </div>
+
+            <div>
+                <div class="footer-title">Calculators</div>
+                <a href="hourly-to-salary.html">Hourly to Salary</a>
+                <a href="salary-to-hourly.html">Salary to Hourly</a>
+                <a href="overtime-calculator.html">Overtime</a>
+                <a href="work-hours-calculator.html">Work Hours</a>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <p>© 2026 Work Pay Calculator. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
