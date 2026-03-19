@@ -971,15 +971,17 @@ button:hover {
 }
 
 .ad-placeholder {
-    background: #f8fafc;
-    border: 1px dashed #cbd5e1;
+    max-width: 700px;
+    margin: 24px auto 0;
+    background: white;
+    border: 1px dashed #94a3b8;
     border-radius: 18px;
     padding: 20px;
     text-align: center;
-    color: #64748b;
+    color: #475569;
     font-size: 14px;
     line-height: 1.7;
-    margin-top: 24px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
 }
 
 .related-section {
@@ -1059,4 +1061,19 @@ button:hover {
 
 .ad-placeholder {
     margin-top: 24px;
+}
+
+.related-section,
+.faq-mini {
+    max-width: 700px;
+    margin: 30px auto 0;
+}
+
+.related-section h2,
+.faq-mini h2 {
+    margin-bottom: 16px;
+}
+
+.content-box ul li {
+    margin-bottom: 8px;
 }
