@@ -1,0 +1,447 @@
+/* ===== Budget page ===== */
+.budget-page {
+  max-width: 860px;
+  margin: 48px auto 0;
+  padding: 0 16px 48px;
+}
+
+.budget-card {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  box-shadow: 0 12px 35px rgba(83, 109, 140, 0.12);
+  border-radius: 24px;
+  padding: 28px;
+  margin-bottom: 24px;
+}
+
+.budget-card h1,
+.budget-card h2 {
+  margin-top: 0;
+  color: #1f2d3d;
+}
+
+.budget-intro {
+  color: #556476;
+  line-height: 1.65;
+  margin-bottom: 22px;
+}
+
+.budget-field {
+  margin-bottom: 16px;
+}
+
+.budget-field label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 700;
+  color: #243142;
+}
+
+.budget-field input,
+.budget-field select {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(150, 170, 190, 0.35);
+  background: rgba(255, 255, 255, 0.92);
+  font-size: 15px;
+  outline: none;
+}
+
+.budget-field input:focus,
+.budget-field select:focus {
+  border-color: #7fb8ff;
+  box-shadow: 0 0 0 4px rgba(127, 184, 255, 0.18);
+}
+
+.budget-two-col,
+.budget-three-col,
+.budget-rule-grid,
+.budget-faq-grid {
+  display: grid;
+  gap: 14px;
+}
+
+.budget-two-col {
+  grid-template-columns: 1fr 1fr;
+}
+
+.budget-three-col {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.budget-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.budget-summary-box,
+.budget-health-box,
+.budget-progress-item,
+.budget-mini-card,
+.budget-info-card,
+.budget-faq-item,
+.budget-rule-card {
+  background: rgba(255, 255, 255, 0.68);
+  border: 1px solid rgba(180, 200, 220, 0.28);
+  border-radius: 18px;
+}
+
+.budget-summary-box {
+  padding: 18px;
+}
+
+.budget-summary-label {
+  font-size: 13px;
+  color: #64748b;
+  margin-bottom: 8px;
+}
+
+.budget-summary-value {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: #1e293b;
+  word-break: break-word;
+}
+
+.budget-health-box {
+  padding: 18px;
+  margin-bottom: 22px;
+}
+
+.budget-health-label {
+  font-size: 13px;
+  color: #64748b;
+  margin-bottom: 8px;
+}
+
+.budget-health-value {
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.budget-health-text {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #536273;
+}
+
+.budget-health-healthy .budget-health-value {
+  color: #127a43;
+}
+
+.budget-health-warning .budget-health-value {
+  color: #b7791f;
+}
+
+.budget-health-overspending .budget-health-value {
+  color: #c0392b;
+}
+
+.budget-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.budget-btn {
+  border: none;
+  border-radius: 16px;
+  padding: 14px 18px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #7db9ff, #91d4ff);
+  color: #17314d;
+  box-shadow: 0 8px 18px rgba(104, 164, 227, 0.25);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.budget-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(104, 164, 227, 0.3);
+}
+
+.budget-btn--secondary {
+  background: rgba(255, 255, 255, 0.92);
+  color: #223446;
+  border: 1px solid rgba(180, 200, 220, 0.35);
+  box-shadow: none;
+}
+
+.budget-btn--secondary:hover {
+  box-shadow: none;
+}
+
+.budget-note,
+.budget-summary-intro {
+  font-size: 14px;
+  color: #58687a;
+  line-height: 1.65;
+}
+
+.budget-summary-intro {
+  margin: -4px 0 18px;
+}
+
+.budget-section-title {
+  margin: 36px 0 16px;
+  font-size: 1.08rem;
+  color: #223446;
+}
+
+.budget-table-wrap {
+  overflow-x: auto;
+}
+
+.budget-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.67);
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.budget-table th,
+.budget-table td {
+  padding: 14px 12px;
+  text-align: left;
+  border-bottom: 1px solid rgba(180, 200, 220, 0.25);
+  font-size: 14px;
+}
+
+.budget-table th {
+  background: rgba(214, 234, 255, 0.55);
+  color: #213446;
+  font-weight: 700;
+}
+
+.budget-table tr:last-child td {
+  border-bottom: none;
+}
+
+.budget-progress-list {
+  display: grid;
+  gap: 14px;
+}
+
+.budget-progress-item {
+  padding: 14px;
+}
+
+.budget-progress-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #223446;
+}
+
+.budget-progress-bar {
+  width: 100%;
+  height: 12px;
+  border-radius: 999px;
+  background: rgba(200, 215, 232, 0.42);
+  overflow: hidden;
+}
+
+.budget-progress-fill {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.35s ease;
+  background: linear-gradient(90deg, #86bfff, #7fd4da);
+}
+
+.budget-progress-fill.warning {
+  background: linear-gradient(90deg, #f7c66f, #f4b066);
+}
+
+.budget-progress-fill.danger {
+  background: linear-gradient(90deg, #ff9b91, #ff7f7f);
+}
+
+.budget-rule-wrap {
+  margin-top: 22px;
+}
+
+.budget-rule-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.budget-rule-card {
+  padding: 18px;
+}
+
+.budget-rule-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: #5c6b7c;
+}
+
+.budget-rule-percent {
+  font-size: 1.9rem;
+  font-weight: 800;
+  margin-top: 6px;
+  margin-bottom: 4px;
+}
+
+.budget-rule-amount {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.budget-rule-card p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #556476;
+}
+
+.budget-needs .budget-rule-percent,
+.budget-needs .budget-rule-amount {
+  color: #3867d6;
+}
+
+.budget-wants .budget-rule-percent,
+.budget-wants .budget-rule-amount {
+  color: #d97706;
+}
+
+.budget-savings .budget-rule-percent,
+.budget-savings .budget-rule-amount {
+  color: #0f9d58;
+}
+
+.budget-rule-note {
+  margin-top: 14px;
+}
+
+.budget-info-card,
+.budget-faq-item,
+.budget-mini-card {
+  padding: 18px;
+  line-height: 1.65;
+  color: #4f5f71;
+}
+
+.budget-info-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.budget-info-card h4,
+.budget-faq-item h4,
+.budget-mini-card h3 {
+  margin: 0 0 8px;
+  color: #223446;
+}
+
+.budget-info-card p,
+.budget-faq-item p,
+.budget-mini-card p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.budget-paragraph-gap {
+  margin-top: 12px;
+}
+
+.budget-faq-grid {
+  grid-template-columns: 1fr 1fr;
+}
+
+.budget-tips-list {
+  margin: 0;
+  padding-left: 18px;
+  line-height: 1.8;
+}
+
+.budget-mini-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.budget-mini-card-link {
+  display: inline-block;
+  margin-top: 10px;
+  font-weight: 700;
+  color: #2f64e1;
+  text-decoration: none;
+}
+
+.budget-mini-card-link:hover {
+  text-decoration: underline;
+}
+
+.budget-positive {
+  color: #127a43;
+}
+
+.budget-negative {
+  color: #c0392b;
+}
+
+@media (max-width: 1050px) {
+  .budget-two-col,
+  .budget-three-col,
+  .budget-summary-grid,
+  .budget-rule-grid,
+  .budget-info-grid,
+  .budget-faq-grid,
+  .budget-mini-cards-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .site-header__inner {
+    flex-wrap: wrap;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+@media (max-width: 700px) {
+  .budget-two-col,
+  .budget-three-col,
+  .budget-summary-grid,
+  .budget-rule-grid,
+  .budget-info-grid,
+  .budget-faq-grid,
+  .budget-mini-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .budget-actions {
+    flex-direction: column;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .dropdown-menu {
+    min-width: 190px;
+  }
+}
+
+.budget-info-grid,
+.budget-mini-cards-grid,
+.budget-faq-grid,
+.budget-table-wrap,
+.budget-progress-list,
+.budget-rule-wrap,
+.budget-info-card {
+  margin-bottom: 22px;
+}
