@@ -3,49 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Take-Home Pay Calculator | Work Pay Calculator</title>
-    <meta name="description" content="Estimate take-home pay after tax using gross pay and estimated tax rate.">
-    <meta name="keywords" content="take home pay calculator, net pay calculator, after tax income calculator">
-    <meta name="author" content="Work Pay Calculator">
-    <link rel="canonical" href="https://abi-1-1.github.io/take-home-pay-calculator.html">
 
-    <meta property="og:title" content="Take-Home Pay Calculator">
-    <meta property="og:description" content="Estimate take-home pay after tax using gross pay and tax rate.">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://abi-1-1.github.io/take-home-pay-calculator.html">
+    <title>Take-Home Pay Calculator | Estimate Net Pay After Taxes in the USA</title>
+    <meta name="description" content="Use this free Take-Home Pay Calculator to estimate net pay after taxes. Calculate weekly, monthly, or annual take-home income from gross pay and tax rate in seconds.">
+    <meta name="keywords" content="take-home pay calculator, net pay calculator, after tax calculator, paycheck after tax, gross to net pay calculator, take home income calculator, USA pay calculator">
+    <meta name="author" content="Work Pay Calculator">
+    <link rel="canonical" href="https://abi-1-1.github.io/work-pay-calculator/take-home-pay-calculator.html">
+
+    <meta property="og:title" content="Take-Home Pay Calculator | Estimate Net Pay After Taxes in the USA">
+    <meta property="og:description" content="Free online take-home pay calculator for weekly, monthly, and annual net pay estimates after tax.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://abi-1-1.github.io/work-pay-calculator/take-home-pay-calculator.html">
     <meta property="og:site_name" content="Work Pay Calculator">
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Take-Home Pay Calculator">
-    <meta name="twitter:description" content="Estimate take-home pay after tax using gross pay and tax rate.">
+    <meta name="twitter:description" content="Estimate take-home pay after taxes with this free calculator.">
+
+    <meta name="google-site-verification" content="kU5WNx88euEe9lSblEn7c-zo62_xEEezcfYsFqcPrnw" />
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4736461986844584"
-     crossorigin="anonymous"></script>
-     
+        crossorigin="anonymous"></script>
+
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
     <header class="site-header">
-        <div class="container">
+        <div class="container header-wrap">
             <a href="index.html" class="logo">Work Pay Calculator</a>
 
             <nav class="nav">
                 <a href="index.html">Home</a>
-
-                <a href="budget-calculator.html">Budget-Calculator</a>
+                <a href="budget-calculator.html">Budget Calculator</a>
 
                 <div class="dropdown">
                     <a href="#" class="dropdown-toggle">Calculators ▾</a>
                     <div class="dropdown-menu">
                         <a href="hourly-to-salary.html">Hourly to Salary</a>
                         <a href="salary-to-hourly.html">Salary to Hourly</a>
-                        <a href="overtime-calculator.html">Overtime</a>
+                        <a href="overtime-calculator.html">Overtime Pay</a>
                         <a href="work-hours-calculator.html">Work Hours</a>
                         <a href="weekly-pay-calculator.html">Weekly Pay</a>
                         <a href="monthly-pay-calculator.html">Monthly Pay</a>
-                        <a href="take-home-pay-calculator.html">Take-Home Pay</a>
+                        <a class="active" href="take-home-pay-calculator.html">Take-Home Pay</a>
                     </div>
                 </div>
 
@@ -55,169 +57,375 @@
     </header>
 
     <main>
-        <section class="calculator-page">
+        <section class="hero hero-large">
             <div class="container">
-                <div class="calculator-box">
-                    <h1>Take-Home Pay Calculator</h1>
-                    <p class="calculator-intro">
-                        Enter your gross pay and estimated tax rate to calculate your take-home pay after tax.
-                    </p>
+                <div class="hero-box hero-grid">
+                    <div class="hero-text">
+                        <span class="hero-badge">Free Net Pay Estimate</span>
+                        <h1>Take-Home Pay Calculator</h1>
+                        <p>
+                            Estimate your take-home pay after taxes in seconds. Enter your gross income and tax rate
+                            to calculate net pay for weekly, monthly, or annual income planning. This free calculator
+                            is useful for paycheck estimates, job comparisons, and personal budgeting in the USA.
+                        </p>
 
-                    <div class="form-group">
-                        <label for="grossPayInput">Gross Pay ($)</label>
-                        <input type="number" id="grossPayInput" placeholder="Enter gross pay">
+                        <div class="hero-actions">
+                            <a class="main-button" href="#calculator">Use the Calculator</a>
+                            <a class="secondary-button" href="budget-calculator.html">Plan Your Budget</a>
+                        </div>
+
+                        <div class="hero-points">
+                            <div class="hero-point">Gross to net estimate</div>
+                            <div class="hero-point">Weekly, monthly, or yearly use</div>
+                            <div class="hero-point">Fast and simple to understand</div>
+                        </div>
                     </div>
 
-                    <div class="form-group">
-                        <label for="takeHomeTaxRate">Estimated Tax Rate for Your State/Area (%)</label>
-                        <input type="number" id="takeHomeTaxRate" placeholder="Enter your tax rate" value="20">
-                        <p class="field-note">Enter your estimated tax rate based on your state or local area. This is only a simple estimate.</p>
-                    </div>
+                    <div class="hero-side-card">
+                        <div class="mini-stat-card">
+                            <div class="mini-stat-label">What it does</div>
+                            <div class="mini-stat-title">Estimate net income</div>
+                            <p>Quickly see how much income may remain after taxes.</p>
+                        </div>
 
-                    <div class="button-row">
-                        <button id="takeHomeCalculateButton">Calculate</button>
-                        <button type="button" class="secondary-action" id="resetTakeHomeButton">Reset</button>
-                        <button type="button" class="secondary-action copy-action" id="copyTakeHomeButton">Copy Result</button>
-                    </div>
-
-                    <div class="result-box">
-                        <h2>Results</h2>
-                        <p><strong>Gross Pay (Before Tax):</strong> <span id="grossPayBeforeResult">$0.00</span></p>
-                        <p><strong>Take-Home Pay (After Tax):</strong> <span id="takeHomeAfterResult">$0.00</span></p>
+                        <div class="mini-stat-card">
+                            <div class="mini-stat-label">Helpful for</div>
+                            <div class="mini-stat-title">Jobs and budgeting</div>
+                            <p>Compare offers, estimate paychecks, and plan monthly expenses more clearly.</p>
+                        </div>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <div class="content-box calculator-content">
-                    <h2>How to calculate take-home pay</h2>
-                    <p>
-                        To estimate take-home pay, subtract your estimated taxes from your gross pay.
-                    </p>
+        <section class="container ad-section">
+            <div class="ad-placeholder">
+                Ad space placeholder — future ad block or featured content
+            </div>
+        </section>
 
-                    <p>
-                        This gives a simplified net pay estimate that can help with basic budgeting and pay planning.
-                    </p>
-
-                    <h2>Formula</h2>
-                    <p><strong>Gross Pay × (1 - Tax Rate ÷ 100) = Take-Home Pay</strong></p>
-
-                    <h2>Important note</h2>
-                    <p>
-                        This is a simple estimate and does not include exact federal, state, local, or payroll tax rules.
-                    </p>
-
-                    <h2>Example</h2>
-                    <p>
-                        If your gross pay is $3,000 and your estimated tax rate is 20%,
-                        your estimated take-home pay is $2,400 after tax.
-                    </p>
-
-                    <h2>Who this calculator is for</h2>
-                    <p>
-                        This tool is useful for workers, freelancers, students, and anyone who wants
-                        a simple estimate of what they may keep after taxes.
-                    </p>
-
-                    <h2>Important limitations</h2>
-                    <p>
-                        This is not an exact tax calculator. It does not include real federal, state,
-                        local, payroll, or personal tax situations and should be used for rough estimates only.
-                    </p>
-                </div>
-                
-                <div class="ad-placeholder">
-                    Future ad space or sponsored calculator placement
+        <section class="calculator-section" id="calculator">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>Calculate Your Take-Home Pay</h2>
+                    <p>Enter gross income and tax rate to estimate net pay after taxes.</p>
                 </div>
 
+                <div class="calculator-card">
+                    <div class="calculator-grid">
+                        <div class="calculator-form">
+                            <div class="form-group">
+                                <label for="grossIncome">Gross Income</label>
+                                <input type="number" id="grossIncome" placeholder="Enter your gross income" min="0" step="0.01">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="taxRate">Tax Rate (%)</label>
+                                <input type="number" id="taxRate" placeholder="Enter tax rate" min="0" max="100" step="0.01">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="incomeType">Income Type</label>
+                                <select id="incomeType">
+                                    <option value="weekly">Weekly</option>
+                                    <option value="monthly">Monthly</option>
+                                    <option value="annual">Annual</option>
+                                </select>
+                            </div>
+
+                            <button class="main-button calc-button">Calculate Take-Home Pay</button>
+                        </div>
+
+                        <div class="calculator-result">
+                            <div class="result-box">
+                                <div class="result-label">Estimated Net Pay</div>
+                                <div class="result-value" id="netPayResult">$0.00</div>
+                                <p id="resultDescription">
+                                    Your estimated take-home pay after taxes will appear here.
+                                </p>
+                            </div>
+
+                            <div class="result-details">
+                                <div class="detail-row">
+                                    <span>Gross Income</span>
+                                    <strong id="grossDisplay">$0.00</strong>
+                                </div>
+                                <div class="detail-row">
+                                    <span>Estimated Taxes</span>
+                                    <strong id="taxDisplay">$0.00</strong>
+                                </div>
+                                <div class="detail-row">
+                                    <span>Income Type</span>
+                                    <strong id="typeDisplay">Weekly</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="info-section">
+            <div class="container">
+                <div class="info-box">
+                    <h2>What Is Take-Home Pay?</h2>
+                    <p>
+                        Take-home pay is the amount of money you keep after taxes are taken out of your gross income.
+                        Gross pay is the total amount earned before taxes, while net pay, also called take-home pay,
+                        is what remains after deductions such as income tax.
+                    </p>
+                    <p>
+                        This calculator gives a simple estimate using the tax rate you enter. It is useful for
+                        understanding paycheck value, comparing gross and net income, and planning your weekly,
+                        monthly, or yearly budget.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="info-section alt-section">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>How to Use This Take-Home Pay Calculator</h2>
+                    <p>Use the calculator in three quick steps.</p>
                 </div>
 
-                <div class="related-section">
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <h3>Enter your gross income</h3>
+                        <p>Add the amount you earn before taxes for weekly, monthly, or annual pay.</p>
+                    </div>
+
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <h3>Enter your tax rate</h3>
+                        <p>Type the percentage you want to use for an estimated tax deduction.</p>
+                    </div>
+
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <h3>View your net pay</h3>
+                        <p>See your estimated take-home income after taxes and compare the difference.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="formula-section">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>Take-Home Pay Formula</h2>
+                    <p>This calculator uses a simple net pay formula.</p>
+                </div>
+
+                <div class="formula-card">
+                    <div class="formula-line">Estimated Taxes = Gross Income × (Tax Rate ÷ 100)</div>
+                    <div class="formula-line">Take-Home Pay = Gross Income − Estimated Taxes</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="examples-section">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>Examples of Take-Home Pay</h2>
+                    <p>Here are a few simple examples to show how net pay estimates work.</p>
+                </div>
+
+                <div class="examples-grid">
+                    <div class="example-card">
+                        <h3>Weekly Example</h3>
+                        <p><strong>Gross weekly income:</strong> $1,000</p>
+                        <p><strong>Tax rate:</strong> 12%</p>
+                        <p><strong>Estimated taxes:</strong> $120</p>
+                        <p><strong>Estimated take-home pay:</strong> $880</p>
+                    </div>
+
+                    <div class="example-card">
+                        <h3>Monthly Example</h3>
+                        <p><strong>Gross monthly income:</strong> $4,500</p>
+                        <p><strong>Tax rate:</strong> 15%</p>
+                        <p><strong>Estimated taxes:</strong> $675</p>
+                        <p><strong>Estimated take-home pay:</strong> $3,825</p>
+                    </div>
+
+                    <div class="example-card">
+                        <h3>Annual Example</h3>
+                        <p><strong>Gross annual income:</strong> $60,000</p>
+                        <p><strong>Tax rate:</strong> 18%</p>
+                        <p><strong>Estimated taxes:</strong> $10,800</p>
+                        <p><strong>Estimated take-home pay:</strong> $49,200</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="use-cases-section">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>Why Use a Take-Home Pay Calculator?</h2>
+                    <p>This tool is useful for many common work and budgeting situations.</p>
+                </div>
+
+                <div class="use-cases-grid">
+                    <div class="use-case-card">
+                        <h3>Compare job offers</h3>
+                        <p>See the difference between gross salary and estimated net income more clearly.</p>
+                    </div>
+
+                    <div class="use-case-card">
+                        <h3>Plan your budget</h3>
+                        <p>Use net pay instead of gross pay to build a more realistic monthly budget.</p>
+                    </div>
+
+                    <div class="use-case-card">
+                        <h3>Estimate paychecks</h3>
+                        <p>Understand how much weekly or monthly income may remain after taxes.</p>
+                    </div>
+
+                    <div class="use-case-card">
+                        <h3>Understand deductions</h3>
+                        <p>See how tax percentages can change what you actually keep from your income.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <div class="container">
+                <h2>Take-Home Pay Calculator FAQ</h2>
+
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <h3>What is take-home pay?</h3>
+                        <p>
+                            Take-home pay is the amount of money you keep after taxes and deductions are removed
+                            from your gross income.
+                        </p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>What is the difference between gross pay and net pay?</h3>
+                        <p>
+                            Gross pay is your total earnings before deductions. Net pay, or take-home pay,
+                            is the amount left after taxes and other deductions.
+                        </p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>Is this calculator exact?</h3>
+                        <p>
+                            No. This is a simplified estimate based on the tax rate you enter. Actual paycheck
+                            deductions may vary by state, employer, benefits, and other factors.
+                        </p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>Can I use this for weekly, monthly, or yearly income?</h3>
+                        <p>
+                            Yes. You can choose weekly, monthly, or annual income and estimate net pay for that period.
+                        </p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>Why is take-home pay important for budgeting?</h3>
+                        <p>
+                            Budgeting with net pay is more realistic because it shows the amount you may actually have
+                            available to spend or save after taxes.
+                        </p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>Can I use this calculator for job comparisons?</h3>
+                        <p>
+                            Yes. It is helpful for comparing jobs or offers when you want to understand estimated
+                            after-tax income instead of just gross salary.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="related-section">
+            <div class="container">
+                <div class="section-heading">
                     <h2>Related Calculators</h2>
-                    <div class="related-grid">
-                        <a class="related-card" href="hourly-to-salary.html">
-                            <h3>Hourly to Salary</h3>
-                            <p>Convert hourly pay into yearly, monthly, and weekly estimates.</p>
-                        </a>
-
-                        <a class="related-card" href="monthly-pay-calculator.html">
-                            <h3>Monthly Pay</h3>
-                            <p>Estimate monthly pay before tax and after tax.</p>
-                        </a>
-
-                        <a class="related-card" href="take-home-pay-calculator.html">
-                            <h3>Take-Home Pay</h3>
-                            <p>Estimate simple after-tax take-home income.</p>
-                        </a>
-                    </div>
+                    <p>Use these tools to estimate salary, paycheck, and budget details more accurately.</p>
                 </div>
 
-                <div class="faq-mini">
-                    <h2>Quick FAQ</h2>
+                <div class="cards cards-better">
+                    <a class="card card-link" href="weekly-pay-calculator.html">
+                        <span class="card-tag">Paycheck</span>
+                        <h3>Weekly Pay Calculator</h3>
+                        <p>Estimate weekly earnings before tax and after tax.</p>
+                    </a>
 
-                    <div class="faq-list">
-                        <div class="faq-item">
-                            <h3>Is this calculator free?</h3>
-                            <p>Yes. It is free to use.</p>
-                        </div>
+                    <a class="card card-link" href="monthly-pay-calculator.html">
+                        <span class="card-tag">Paycheck</span>
+                        <h3>Monthly Pay Calculator</h3>
+                        <p>Estimate monthly income from salary, hourly wages, or weekly pay.</p>
+                    </a>
 
-                        <div class="faq-item">
-                            <h3>Is the tax result exact?</h3>
-                            <p>No. It is a simple estimate based on the tax percentage you enter.</p>
-                        </div>
+                    <a class="card card-link" href="salary-to-hourly.html">
+                        <span class="card-tag">Convert</span>
+                        <h3>Salary to Hourly Calculator</h3>
+                        <p>Convert annual salary into an estimated hourly wage.</p>
+                    </a>
 
-                        <div class="faq-item">
-                            <h3>Can I use this for official tax filing?</h3>
-                            <p>No. This calculator is for simple estimates only and not for legal or tax filing purposes.</p>
-                        </div>
-                    </div>
+                    <a class="card card-link" href="budget-calculator.html">
+                        <span class="card-tag">Budget</span>
+                        <h3>Budget Calculator</h3>
+                        <p>Plan expenses, savings, and spending using your estimated net income.</p>
+                    </a>
                 </div>
             </div>
         </section>
     </main>
 
     <footer class="site-footer">
-    <div class="footer-container">
-        <div class="footer-grid">
-        <div class="footer-column">
-            <h3>Work Pay Calculator</h3>
-            <p>Free salary and work calculators for the USA.</p>
-        </div>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Work Pay Calculator</h3>
+                    <p>Free salary, paycheck, and budget calculators for the USA.</p>
+                </div>
 
-        <div class="footer-column">
-            <h4>Pages</h4>
-            <ul class="footer-links">
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="privacy-policy.html">Privacy Policy</a></li>
-            <li><a href="terms.html">Terms</a></li>
-            </ul>
-        </div>
+                <div class="footer-column">
+                    <h4>Pages</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms</a></li>
+                    </ul>
+                </div>
 
-        <div class="footer-column">
-            <h4>Calculators</h4>
-            <div class="footer-links-split">
-            <ul class="footer-links">
-                <li><a href="hourly-to-salary.html">Hourly to Salary</a></li>
-                <li><a href="salary-to-hourly.html">Salary to Hourly</a></li>
-                <li><a href="overtime-calculator.html">Overtime</a></li>
-                <li><a href="work-hours-calculator.html">Work Hours</a></li>
-            </ul>
+                <div class="footer-column">
+                    <h4>Calculators</h4>
+                    <div class="footer-links-split">
+                        <ul class="footer-links">
+                            <li><a href="hourly-to-salary.html">Hourly to Salary</a></li>
+                            <li><a href="salary-to-hourly.html">Salary to Hourly</a></li>
+                            <li><a href="overtime-calculator.html">Overtime Pay</a></li>
+                            <li><a href="work-hours-calculator.html">Work Hours</a></li>
+                        </ul>
 
-            <ul class="footer-links">
-                <li><a href="weekly-pay-calculator.html">Weekly Pay</a></li>
-                <li><a href="monthly-pay-calculator.html">Monthly Pay</a></li>
-                <li><a href="take-home-pay-calculator.html">Take-Home Pay</a></li>
-                <li><a href="budget-calculator.html">Budget Calculator</a></li>
-            </ul>
+                        <ul class="footer-links">
+                            <li><a href="weekly-pay-calculator.html">Weekly Pay</a></li>
+                            <li><a href="monthly-pay-calculator.html">Monthly Pay</a></li>
+                            <li><a href="take-home-pay-calculator.html">Take-Home Pay</a></li>
+                            <li><a href="budget-calculator.html">Budget Calculator</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 Work Pay Calculator. All rights reserved.</p>
             </div>
         </div>
-        </div>
-
-        <div class="footer-bottom">
-        <p>© 2026 Work Pay Calculator. All rights reserved.</p>
-        </div>
-    </div>
     </footer>
 
     <script src="js/main.js"></script>
-</body>
 </html>

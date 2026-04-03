@@ -22,449 +22,538 @@
     content="Calculate your weekly or monthly expenses, see spending percentages, daily recommendations, and compare your budget to recommended amounts."
   />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://abi-1-1.github.io/budget-calculator.html" />
-  <meta property="og:image" content="https://abi-1-1.github.io/preview.png" />
+  <meta property="og:url" content="https://abi-1-1.github.io/work-pay-calculator/budget-calculator.html" />
 
-  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Budget Calculator | Weekly and Monthly Expense Planner" />
   <meta
     name="twitter:description"
     content="Track expenses, see budget percentages, and compare spending with recommended limits."
   />
-  <meta name="twitter:image" content="https://abi-1-1.github.io/preview.png" />
 
-  <link rel="canonical" href="https://abi-1-1.github.io/budget-calculator.html" />
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://abi-1-1.github.io/work-pay-calculator/budget-calculator.html" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
 
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4736461986844584"
-     crossorigin="anonymous"></script>
-     
-  <!-- Общие стили сайта -->
+    crossorigin="anonymous"></script>
+
   <link rel="stylesheet" href="css/style.css" />
-  <!-- Стили именно этой страницы -->
   <link rel="stylesheet" href="budget-calculator.css" />
 </head>
 <body>
   <header class="site-header">
-    <div class="container site-header__inner">
+    <div class="container header-wrap">
       <a href="index.html" class="logo">Work Pay Calculator</a>
 
-            <nav class="nav">
-                <a href="index.html">Home</a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a class="active" href="budget-calculator.html">Budget Calculator</a>
 
-                <a class="active" href="budget-calculator.html">Budget-Calculator</a>
+        <div class="dropdown">
+          <a href="#" class="dropdown-toggle">Calculators ▾</a>
+          <div class="dropdown-menu">
+            <a href="hourly-to-salary.html">Hourly to Salary</a>
+            <a href="salary-to-hourly.html">Salary to Hourly</a>
+            <a href="overtime-calculator.html">Overtime</a>
+            <a href="work-hours-calculator.html">Work Hours</a>
+            <a href="weekly-pay-calculator.html">Weekly Pay</a>
+            <a href="monthly-pay-calculator.html">Monthly Pay</a>
+            <a href="take-home-pay-calculator.html">Take-Home Pay</a>
+          </div>
+        </div>
 
-                <div class="dropdown">
-                    <a href="#" class="dropdown-toggle">Calculators ▾</a>
-                    <div class="dropdown-menu">
-                        <a href="hourly-to-salary.html">Hourly to Salary</a>
-                        <a href="salary-to-hourly.html">Salary to Hourly</a>
-                        <a href="overtime-calculator.html">Overtime</a>
-                        <a href="work-hours-calculator.html">Work Hours</a>
-                        <a href="weekly-pay-calculator.html">Weekly Pay</a>
-                        <a href="monthly-pay-calculator.html">Monthly Pay</a>
-                        <a href="take-home-pay-calculator.html">Take-Home Pay</a>
-                    </div>
-                </div>
-
-                <a href="about.html">About</a>
-            </nav>
+        <a href="about.html">About</a>
+      </nav>
     </div>
   </header>
 
-  <main class="budget-page">
-    <section class="budget-card">
-      <h1>Budget & Expense Calculator</h1>
-      <p class="budget-intro">
-        Plan your weekly or monthly budget, see where your money goes, compare
-        every category as a percentage of income, and get recommended daily,
-        weekly, and monthly spending targets.
-      </p>
+  <main>
+    <section class="hero hero-large budget-hero">
+      <div class="container">
+        <div class="hero-box hero-grid">
+          <div class="hero-text">
+            <span class="hero-badge">Weekly & Monthly Planner</span>
+            <h1>Budget Calculator for Income, Expenses, and Spending Goals</h1>
+            <p>
+              Use this budget calculator to plan your weekly or monthly spending, compare expenses by category,
+              track money left after bills, and view simple recommendations for needs, wants, and savings.
+            </p>
 
-      <div class="budget-field">
-        <label for="budgetPeriod">Choose budget period</label>
-        <select id="budgetPeriod">
-          <option value="monthly">Monthly budget</option>
-          <option value="weekly">Weekly budget</option>
-        </select>
-      </div>
+            <div class="hero-actions">
+              <a class="main-button" href="#budget-calculator">Start Budget Planning</a>
+              <a class="secondary-button" href="#budget-summary">View Budget Summary</a>
+            </div>
 
-      <div class="budget-field">
-        <label for="incomeType">Income type</label>
-        <select id="incomeType">
-          <option value="hourly">Hourly income</option>
-          <option value="weekly">Weekly income</option>
-          <option value="monthly">Monthly income</option>
-        </select>
-      </div>
-
-      <div class="budget-three-col">
-        <div class="budget-field">
-          <label for="incomeAmount">Income amount ($)</label>
-          <input type="number" id="incomeAmount" min="0" step="0.01" placeholder="e.g. 20 or 3500" />
-        </div>
-
-        <div class="budget-field" id="hoursField">
-          <label for="hoursPerWeek">Hours per week</label>
-          <input type="number" id="hoursPerWeek" min="0" step="0.1" placeholder="e.g. 40" />
-        </div>
-
-        <div class="budget-field" id="weeksField">
-          <label for="weeksPerMonth">Weeks per month</label>
-          <input type="number" id="weeksPerMonth" min="0" step="0.01" value="4.33" />
-        </div>
-      </div>
-
-      <h2 class="budget-section-title">Expenses</h2>
-
-      <div class="budget-two-col">
-        <div class="budget-field">
-          <label for="rent">Housing / Rent ($)</label>
-          <input type="number" id="rent" min="0" step="0.01" placeholder="e.g. 900" />
-        </div>
-
-        <div class="budget-field">
-          <label for="food">Food / Groceries ($)</label>
-          <input type="number" id="food" min="0" step="0.01" placeholder="e.g. 300" />
-        </div>
-
-        <div class="budget-field">
-          <label for="transport">Transport ($)</label>
-          <input type="number" id="transport" min="0" step="0.01" placeholder="e.g. 120" />
-        </div>
-
-        <div class="budget-field">
-          <label for="utilities">Utilities ($)</label>
-          <input type="number" id="utilities" min="0" step="0.01" placeholder="e.g. 110" />
-        </div>
-
-        <div class="budget-field">
-          <label for="loans">Loans / Debt ($)</label>
-          <input type="number" id="loans" min="0" step="0.01" placeholder="e.g. 250" />
-        </div>
-
-        <div class="budget-field">
-          <label for="emergency">Emergency Fund / Savings ($)</label>
-          <input type="number" id="emergency" min="0" step="0.01" placeholder="e.g. 200" />
-        </div>
-
-        <div class="budget-field">
-          <label for="personal">Personal / Wants ($)</label>
-          <input type="number" id="personal" min="0" step="0.01" placeholder="e.g. 180" />
-        </div>
-
-        <div class="budget-field">
-          <label for="other">Other Expenses ($)</label>
-          <input type="number" id="other" min="0" step="0.01" placeholder="e.g. 100" />
-        </div>
-      </div>
-
-      <div class="budget-actions">
-        <button class="budget-btn" id="calculateBtn" type="button">Calculate Budget</button>
-        <button class="budget-btn budget-btn--secondary" id="resetBtn" type="button">Reset</button>
-      </div>
-
-      <p class="budget-note">
-        Enter expenses in the same period you selected above. For example, if
-        you choose monthly budget, all expenses should be monthly amounts.
-      </p>
-    </section>
-
-    <section class="budget-card">
-      <h2>Budget Summary</h2>
-      <p class="budget-summary-intro">
-        Review your income, expenses, spending percentages, and recommended budget targets.
-      </p>
-
-      <div class="budget-summary-grid">
-        <div class="budget-summary-box">
-          <div class="budget-summary-label">Income</div>
-          <div class="budget-summary-value" id="totalIncome">$0.00</div>
-        </div>
-
-        <div class="budget-summary-box">
-          <div class="budget-summary-label">Total Expenses</div>
-          <div class="budget-summary-value" id="totalExpenses">$0.00</div>
-        </div>
-
-        <div class="budget-summary-box">
-          <div class="budget-summary-label">Money Left</div>
-          <div class="budget-summary-value" id="moneyLeft">$0.00</div>
-        </div>
-
-        <div class="budget-summary-box">
-          <div class="budget-summary-label">Spent % of Income</div>
-          <div class="budget-summary-value" id="spentPercent">0%</div>
-        </div>
-      </div>
-
-      <div class="budget-health-box" id="healthBox">
-        <div class="budget-health-label">Budget health status</div>
-        <div class="budget-health-value" id="budgetHealth">Not calculated yet</div>
-        <div class="budget-health-text" id="budgetHealthText">
-          Add your income and expenses to see your budget status.
-        </div>
-      </div>
-
-      <h3 class="budget-section-title">Expense Breakdown</h3>
-      <div class="budget-table-wrap">
-        <table class="budget-table">
-          <thead>
-            <tr>
-              <th>Category</th>
-              <th>Amount</th>
-              <th>% of Income</th>
-              <th>% of Expenses</th>
-            </tr>
-          </thead>
-          <tbody id="expenseTableBody">
-            <tr>
-              <td colspan="4">Enter your numbers and click “Calculate Budget”.</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <h3 class="budget-section-title">Spending Progress</h3>
-      <div id="progressBars" class="budget-progress-list">
-        <p class="budget-note">Progress bars will appear after calculation.</p>
-      </div>
-
-      <h3 class="budget-section-title">Recommended Budget by Category</h3>
-      <div class="budget-table-wrap">
-        <table class="budget-table">
-          <thead>
-            <tr>
-              <th>Category</th>
-              <th>Recommended %</th>
-              <th>Recommended Amount</th>
-            </tr>
-          </thead>
-          <tbody id="recommendedTableBody">
-            <tr>
-              <td colspan="3">Recommendations will appear after calculation.</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <h3 class="budget-section-title">Daily Recommendations</h3>
-      <div class="budget-table-wrap">
-        <table class="budget-table">
-          <thead>
-            <tr>
-              <th>Recommendation</th>
-              <th>Suggested Daily Amount</th>
-            </tr>
-          </thead>
-          <tbody id="dailyRecommendationBody">
-            <tr>
-              <td colspan="2">Daily recommendations will appear after calculation.</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="budget-rule-wrap">
-        <h3 class="budget-section-title">50 / 30 / 20 Rule Overview</h3>
-        <div class="budget-rule-grid">
-          <div class="budget-rule-card budget-needs">
-            <div class="budget-rule-name">Needs</div>
-            <div class="budget-rule-percent">50%</div>
-            <div class="budget-rule-amount" id="needsAmount">$0.00</div>
-            <p>Housing, food, transport, utilities, debt minimums.</p>
+            <div class="hero-points">
+              <div class="hero-point">Weekly or monthly mode</div>
+              <div class="hero-point">Expense percentages and progress bars</div>
+              <div class="hero-point">50 / 30 / 20 rule overview</div>
+            </div>
           </div>
 
-          <div class="budget-rule-card budget-wants">
-            <div class="budget-rule-name">Wants</div>
-            <div class="budget-rule-percent">30%</div>
-            <div class="budget-rule-amount" id="wantsAmount">$0.00</div>
-            <p>Personal spending, entertainment, flexible lifestyle costs.</p>
-          </div>
+          <div class="hero-side-card">
+            <div class="mini-stat-card">
+              <div class="mini-stat-label">What it does</div>
+              <div class="mini-stat-title">Organize your budget</div>
+              <p>See how income compares to expenses and where your money goes by category.</p>
+            </div>
 
-          <div class="budget-rule-card budget-savings">
-            <div class="budget-rule-name">Savings</div>
-            <div class="budget-rule-percent">20%</div>
-            <div class="budget-rule-amount" id="savingsAmount">$0.00</div>
-            <p>Emergency fund, extra savings, long-term financial safety.</p>
+            <div class="mini-stat-card">
+              <div class="mini-stat-label">Helpful for</div>
+              <div class="mini-stat-title">Planning and control</div>
+              <p>Estimate spending limits, savings targets, and daily recommendations with one tool.</p>
+            </div>
           </div>
         </div>
-        <p class="budget-note budget-rule-note">
-          This rule is a simple budgeting framework. Your real budget may differ
-          based on rent, debt, city, family size, and income level.
-        </p>
       </div>
     </section>
 
-    <section class="budget-card">
-      <h2>How to Use This Budget Calculator</h2>
-      <div class="budget-info-card">
-        <p>
-          Choose whether you want to plan your budget by week or by month. Then select
-          how you earn your income: hourly, weekly, or monthly. Enter your income first,
-          then add your expenses using the same time period.
-        </p>
-        <p class="budget-paragraph-gap">
-          After calculation, the tool shows your total income, total expenses, money left,
-          category percentages, recommended budget targets, daily spending suggestions,
-          and a simple 50 / 30 / 20 budget view.
-        </p>
+    <section class="container ad-section">
+      <div class="ad-placeholder">
+        Ad space placeholder — future ad block or featured content
       </div>
+    </section>
 
-      <h2 class="budget-section-title">What Each Budget Category Means</h2>
-      <div class="budget-info-grid">
-        <div class="budget-info-card">
-          <h4>Housing / Rent</h4>
-          <p>Rent, mortgage, housing payments, and major living costs.</p>
-        </div>
-        <div class="budget-info-card">
-          <h4>Food / Groceries</h4>
-          <p>Groceries, basic meals, and regular food spending.</p>
-        </div>
-        <div class="budget-info-card">
-          <h4>Transport</h4>
-          <p>Fuel, bus, train, taxi, car maintenance, and work travel costs.</p>
-        </div>
-        <div class="budget-info-card">
-          <h4>Utilities</h4>
-          <p>Electricity, water, internet, phone bills, and similar monthly services.</p>
-        </div>
-        <div class="budget-info-card">
-          <h4>Loans / Debt</h4>
-          <p>Credit cards, loan payments, debt minimums, and repayment obligations.</p>
-        </div>
-        <div class="budget-info-card">
-          <h4>Emergency Fund / Savings</h4>
-          <p>Money set aside for financial safety, unexpected costs, or future planning.</p>
-        </div>
-        <div class="budget-info-card">
-          <h4>Personal / Wants</h4>
-          <p>Entertainment, hobbies, shopping, coffee, subscriptions, and flexible spending.</p>
-        </div>
-        <div class="budget-info-card">
-          <h4>Other</h4>
-          <p>Anything that does not fit the main categories above.</p>
+    <section class="budget-section" id="budget-calculator">
+      <div class="container">
+        <div class="budget-layout">
+          <div class="budget-panel budget-main-panel">
+            <div class="section-heading section-heading-left">
+              <h2>Budget Inputs</h2>
+              <p>Choose a budget period, enter income details, and add your expenses using the same period.</p>
+            </div>
+
+            <div class="budget-field">
+              <label for="budgetPeriod">Choose budget period</label>
+              <select id="budgetPeriod">
+                <option value="monthly">Monthly budget</option>
+                <option value="weekly">Weekly budget</option>
+              </select>
+            </div>
+
+            <div class="budget-field">
+              <label for="incomeType">Income type</label>
+              <select id="incomeType">
+                <option value="hourly">Hourly income</option>
+                <option value="weekly">Weekly income</option>
+                <option value="monthly">Monthly income</option>
+              </select>
+            </div>
+
+            <div class="budget-three-col">
+              <div class="budget-field">
+                <label for="incomeAmount">Income amount ($)</label>
+                <input type="number" id="incomeAmount" min="0" step="0.01" placeholder="e.g. 20 or 3500" />
+              </div>
+
+              <div class="budget-field" id="hoursField">
+                <label for="hoursPerWeek">Hours per week</label>
+                <input type="number" id="hoursPerWeek" min="0" step="0.1" placeholder="e.g. 40" />
+              </div>
+
+              <div class="budget-field" id="weeksField">
+                <label for="weeksPerMonth">Weeks per month</label>
+                <input type="number" id="weeksPerMonth" min="0" step="0.01" value="4.33" />
+              </div>
+            </div>
+
+            <h3 class="budget-section-title">Expenses</h3>
+
+            <div class="budget-two-col">
+              <div class="budget-field">
+                <label for="rent">Housing / Rent ($)</label>
+                <input type="number" id="rent" min="0" step="0.01" placeholder="e.g. 900" />
+              </div>
+
+              <div class="budget-field">
+                <label for="food">Food / Groceries ($)</label>
+                <input type="number" id="food" min="0" step="0.01" placeholder="e.g. 300" />
+              </div>
+
+              <div class="budget-field">
+                <label for="transport">Transport ($)</label>
+                <input type="number" id="transport" min="0" step="0.01" placeholder="e.g. 120" />
+              </div>
+
+              <div class="budget-field">
+                <label for="utilities">Utilities ($)</label>
+                <input type="number" id="utilities" min="0" step="0.01" placeholder="e.g. 110" />
+              </div>
+
+              <div class="budget-field">
+                <label for="loans">Loans / Debt ($)</label>
+                <input type="number" id="loans" min="0" step="0.01" placeholder="e.g. 250" />
+              </div>
+
+              <div class="budget-field">
+                <label for="emergency">Emergency Fund / Savings ($)</label>
+                <input type="number" id="emergency" min="0" step="0.01" placeholder="e.g. 200" />
+              </div>
+
+              <div class="budget-field">
+                <label for="personal">Personal / Wants ($)</label>
+                <input type="number" id="personal" min="0" step="0.01" placeholder="e.g. 180" />
+              </div>
+
+              <div class="budget-field">
+                <label for="other">Other Expenses ($)</label>
+                <input type="number" id="other" min="0" step="0.01" placeholder="e.g. 100" />
+              </div>
+            </div>
+
+            <div class="budget-actions">
+              <button class="budget-btn" id="calculateBtn" type="button">Calculate Budget</button>
+              <button class="budget-btn budget-btn--secondary" id="resetBtn" type="button">Reset</button>
+            </div>
+
+            <p class="budget-note">
+              Enter expenses in the same period you selected above. If you choose monthly budget,
+              all entered expenses should also be monthly amounts.
+            </p>
+          </div>
+
+          <div class="budget-panel budget-side-panel">
+            <div class="section-heading section-heading-left">
+              <h2>How This Budget Tool Helps</h2>
+              <p>Use it to compare income, control spending, and plan savings more clearly.</p>
+            </div>
+
+            <div class="budget-mini-info-grid">
+              <div class="budget-info-card">
+                <h4>Track where money goes</h4>
+                <p>See every category as a part of your income and as a part of total expenses.</p>
+              </div>
+
+              <div class="budget-info-card">
+                <h4>Review budget health</h4>
+                <p>Check whether your spending looks healthy, tight, or too high for the selected period.</p>
+              </div>
+
+              <div class="budget-info-card">
+                <h4>Use a simple rule</h4>
+                <p>Compare your numbers to the 50 / 30 / 20 budgeting approach for a quick overview.</p>
+              </div>
+
+              <div class="budget-info-card">
+                <h4>Plan daily limits</h4>
+                <p>See suggested daily amounts for food, transport, personal spending, and flexible costs.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+    </section>
 
-      <h2 class="budget-section-title">Simple Budget Tips</h2>
-      <div class="budget-info-card">
-        <ul class="budget-tips-list">
-          <li>Try to keep housing costs near 25%–30% of income when possible.</li>
-          <li>Build an emergency fund even if you start with a small amount.</li>
-          <li>If your spending is above 80% of income, review personal and flexible expenses first.</li>
-          <li>If you have debt, track minimum payments separately and avoid missing due dates.</li>
-          <li>Use this calculator regularly to compare your real spending to your target budget.</li>
-        </ul>
+    <section class="budget-section" id="budget-summary">
+      <div class="container">
+        <div class="budget-panel">
+          <div class="section-heading section-heading-left">
+            <h2>Budget Summary</h2>
+            <p>Review your income, expenses, spending percentages, and recommended budget targets.</p>
+          </div>
+
+          <div class="budget-summary-grid">
+            <div class="budget-summary-box">
+              <div class="budget-summary-label">Income</div>
+              <div class="budget-summary-value" id="totalIncome">$0.00</div>
+            </div>
+
+            <div class="budget-summary-box">
+              <div class="budget-summary-label">Total Expenses</div>
+              <div class="budget-summary-value" id="totalExpenses">$0.00</div>
+            </div>
+
+            <div class="budget-summary-box">
+              <div class="budget-summary-label">Money Left</div>
+              <div class="budget-summary-value" id="moneyLeft">$0.00</div>
+            </div>
+
+            <div class="budget-summary-box">
+              <div class="budget-summary-label">Spent % of Income</div>
+              <div class="budget-summary-value" id="spentPercent">0%</div>
+            </div>
+          </div>
+
+          <div class="budget-health-box" id="healthBox">
+            <div class="budget-health-label">Budget health status</div>
+            <div class="budget-health-value" id="budgetHealth">Not calculated yet</div>
+            <div class="budget-health-text" id="budgetHealthText">
+              Add your income and expenses to see your budget status.
+            </div>
+          </div>
+
+          <h3 class="budget-section-title">Expense Breakdown</h3>
+          <div class="budget-table-wrap">
+            <table class="budget-table">
+              <thead>
+                <tr>
+                  <th>Category</th>
+                  <th>Amount</th>
+                  <th>% of Income</th>
+                  <th>% of Expenses</th>
+                </tr>
+              </thead>
+              <tbody id="expenseTableBody">
+                <tr>
+                  <td colspan="4">Enter your numbers and click “Calculate Budget”.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3 class="budget-section-title">Spending Progress</h3>
+          <div id="progressBars" class="budget-progress-list">
+            <p class="budget-note">Progress bars will appear after calculation.</p>
+          </div>
+
+          <h3 class="budget-section-title">Recommended Budget by Category</h3>
+          <div class="budget-table-wrap">
+            <table class="budget-table">
+              <thead>
+                <tr>
+                  <th>Category</th>
+                  <th>Recommended %</th>
+                  <th>Recommended Amount</th>
+                </tr>
+              </thead>
+              <tbody id="recommendedTableBody">
+                <tr>
+                  <td colspan="3">Recommendations will appear after calculation.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3 class="budget-section-title">Daily Recommendations</h3>
+          <div class="budget-table-wrap">
+            <table class="budget-table">
+              <thead>
+                <tr>
+                  <th>Recommendation</th>
+                  <th>Suggested Daily Amount</th>
+                </tr>
+              </thead>
+              <tbody id="dailyRecommendationBody">
+                <tr>
+                  <td colspan="2">Daily recommendations will appear after calculation.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="budget-rule-wrap">
+            <h3 class="budget-section-title">50 / 30 / 20 Rule Overview</h3>
+            <div class="budget-rule-grid">
+              <div class="budget-rule-card budget-needs">
+                <div class="budget-rule-name">Needs</div>
+                <div class="budget-rule-percent">50%</div>
+                <div class="budget-rule-amount" id="needsAmount">$0.00</div>
+                <p>Housing, food, transport, utilities, and minimum debt payments.</p>
+              </div>
+
+              <div class="budget-rule-card budget-wants">
+                <div class="budget-rule-name">Wants</div>
+                <div class="budget-rule-percent">30%</div>
+                <div class="budget-rule-amount" id="wantsAmount">$0.00</div>
+                <p>Personal spending, entertainment, flexible lifestyle costs, and wants.</p>
+              </div>
+
+              <div class="budget-rule-card budget-savings">
+                <div class="budget-rule-name">Savings</div>
+                <div class="budget-rule-percent">20%</div>
+                <div class="budget-rule-amount" id="savingsAmount">$0.00</div>
+                <p>Emergency fund, savings, and long-term financial protection.</p>
+              </div>
+            </div>
+            <p class="budget-note budget-rule-note">
+              This is a simple planning model. Real budgets may differ depending on rent, debt,
+              city, income level, and family responsibilities.
+            </p>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <h2 class="budget-section-title">Related Calculators</h2>
-      <div class="budget-mini-cards-grid">
-        <div class="budget-mini-card">
-          <h3>Hourly to Salary</h3>
-          <p>Convert hourly pay into yearly, monthly, and weekly estimates.</p>
-          <a href="hourly-to-salary.html" class="budget-mini-card-link">Open Calculator</a>
-        </div>
+    <section class="budget-section">
+      <div class="container">
+        <div class="budget-panel">
+          <div class="section-heading section-heading-left">
+            <h2>How to Use This Budget Calculator</h2>
+            <p>Follow a simple process to estimate income, compare expenses, and build a clearer budget.</p>
+          </div>
 
-        <div class="budget-mini-card">
-          <h3>Monthly Pay</h3>
-          <p>Estimate monthly pay before tax and after tax.</p>
-          <a href="monthly-pay-calculator.html" class="budget-mini-card-link">Open Calculator</a>
-        </div>
+          <div class="steps-grid budget-steps-grid">
+            <div class="step-card">
+              <div class="step-number">1</div>
+              <h3>Choose your period</h3>
+              <p>Select weekly or monthly mode and make sure all income and expense values use the same period.</p>
+            </div>
 
-        <div class="budget-mini-card">
-          <h3>Take-Home Pay</h3>
-          <p>Estimate simple after-tax take-home income.</p>
-          <a href="take-home-pay-calculator.html" class="budget-mini-card-link">Open Calculator</a>
-        </div>
+            <div class="step-card">
+              <div class="step-number">2</div>
+              <h3>Enter income and expenses</h3>
+              <p>Add your income type first, then fill in your expenses across the categories below.</p>
+            </div>
 
-        <div class="budget-mini-card">
-          <h3>Weekly Pay</h3>
-          <p>Estimate weekly pay from hourly rate and work hours.</p>
-          <a href="weekly-pay-calculator.html" class="budget-mini-card-link">Open Calculator</a>
-        </div>
-      </div>
+            <div class="step-card">
+              <div class="step-number">3</div>
+              <h3>Review results</h3>
+              <p>Check your money left, spending percentages, progress bars, and recommended category targets.</p>
+            </div>
+          </div>
 
-      <h2 class="budget-section-title">Quick FAQ</h2>
-      <div class="budget-faq-grid">
-        <div class="budget-faq-item">
-          <h4>Is this budget calculator weekly or monthly?</h4>
-          <p>
-            It can work as both. You can choose weekly or monthly mode at the top of the page.
-            Just make sure your income and expenses use the same period.
-          </p>
-        </div>
+          <h3 class="budget-section-title">What Each Budget Category Means</h3>
+          <div class="budget-info-grid">
+            <div class="budget-info-card">
+              <h4>Housing / Rent</h4>
+              <p>Rent, mortgage, and major housing-related living costs.</p>
+            </div>
+            <div class="budget-info-card">
+              <h4>Food / Groceries</h4>
+              <p>Regular groceries, meals, and basic food spending.</p>
+            </div>
+            <div class="budget-info-card">
+              <h4>Transport</h4>
+              <p>Fuel, bus, taxi, train, work commute, and car-related travel costs.</p>
+            </div>
+            <div class="budget-info-card">
+              <h4>Utilities</h4>
+              <p>Electricity, water, phone, internet, and similar essential services.</p>
+            </div>
+            <div class="budget-info-card">
+              <h4>Loans / Debt</h4>
+              <p>Loan payments, debt obligations, and minimum credit payments.</p>
+            </div>
+            <div class="budget-info-card">
+              <h4>Emergency Fund / Savings</h4>
+              <p>Money set aside for unexpected costs, protection, or future goals.</p>
+            </div>
+            <div class="budget-info-card">
+              <h4>Personal / Wants</h4>
+              <p>Entertainment, shopping, hobbies, subscriptions, and flexible spending.</p>
+            </div>
+            <div class="budget-info-card">
+              <h4>Other</h4>
+              <p>Anything that does not fit the main categories above.</p>
+            </div>
+          </div>
 
-        <div class="budget-faq-item">
-          <h4>Can I use hourly income?</h4>
-          <p>
-            Yes. Select hourly income, enter your hourly rate, and add your weekly work hours.
-            The calculator will estimate the correct weekly or monthly income for your budget.
-          </p>
-        </div>
+          <h3 class="budget-section-title">Simple Budget Tips</h3>
+          <div class="budget-info-card">
+            <ul class="budget-tips-list">
+              <li>Try to keep housing costs near 25%–30% of income when possible.</li>
+              <li>Build an emergency fund even if you start with a small amount.</li>
+              <li>If spending is above 80% of income, review personal and flexible expenses first.</li>
+              <li>If you have debt, track minimum payments carefully and avoid missed due dates.</li>
+              <li>Use this calculator regularly to compare real spending to your target budget.</li>
+            </ul>
+          </div>
 
-        <div class="budget-faq-item">
-          <h4>Are the recommended percentages exact financial rules?</h4>
-          <p>
-            No. They are simple planning guidelines. Real budgets depend on rent, city, debt,
-            family size, and income level.
-          </p>
-        </div>
+          <h3 class="budget-section-title">Related Calculators</h3>
+          <div class="cards cards-better budget-related-cards">
+            <a class="card card-link" href="hourly-to-salary.html">
+              <span class="card-tag">Convert</span>
+              <h3>Hourly to Salary</h3>
+              <p>Convert hourly pay into yearly, monthly, and weekly estimates.</p>
+            </a>
 
-        <div class="budget-faq-item">
-          <h4>What does budget health status mean?</h4>
-          <p>
-            Healthy means your spending is more balanced. Warning means your expenses are taking
-            most of your income. Overspending means your expenses are too high for the selected period.
-          </p>
+            <a class="card card-link" href="monthly-pay-calculator.html">
+              <span class="card-tag">Paycheck</span>
+              <h3>Monthly Pay</h3>
+              <p>Estimate monthly pay before tax and after tax.</p>
+            </a>
+
+            <a class="card card-link" href="take-home-pay-calculator.html">
+              <span class="card-tag">Net Pay</span>
+              <h3>Take-Home Pay</h3>
+              <p>Estimate simple after-tax take-home income.</p>
+            </a>
+
+            <a class="card card-link" href="weekly-pay-calculator.html">
+              <span class="card-tag">Paycheck</span>
+              <h3>Weekly Pay</h3>
+              <p>Estimate weekly pay from hourly rate and work hours.</p>
+            </a>
+          </div>
+
+          <h3 class="budget-section-title">Quick FAQ</h3>
+          <div class="budget-faq-grid">
+            <div class="budget-faq-item">
+              <h4>Is this budget calculator weekly or monthly?</h4>
+              <p>
+                It works as both. Choose weekly or monthly mode at the top, and keep income and expenses in the same period.
+              </p>
+            </div>
+
+            <div class="budget-faq-item">
+              <h4>Can I use hourly income?</h4>
+              <p>
+                Yes. Select hourly income, enter your hourly rate, and add your weekly work hours to estimate usable income.
+              </p>
+            </div>
+
+            <div class="budget-faq-item">
+              <h4>Are the recommended percentages exact rules?</h4>
+              <p>
+                No. They are practical planning guidelines only. Real budgets depend on housing, debt, city, and income.
+              </p>
+            </div>
+
+            <div class="budget-faq-item">
+              <h4>What does budget health status mean?</h4>
+              <p>
+                Healthy means more balanced spending. Warning means expenses are taking most of your income. Overspending means expenses are too high.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
-    <footer class="site-footer">
+  <footer class="site-footer">
     <div class="footer-container">
-        <div class="footer-grid">
+      <div class="footer-grid">
         <div class="footer-column">
-            <h3>Work Pay Calculator</h3>
-            <p>Free salary and work calculators for the USA.</p>
+          <h3>Work Pay Calculator</h3>
+          <p>Free salary and work calculators for the USA.</p>
         </div>
 
         <div class="footer-column">
-            <h4>Pages</h4>
-            <ul class="footer-links">
+          <h4>Pages</h4>
+          <ul class="footer-links">
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="privacy-policy.html">Privacy Policy</a></li>
             <li><a href="terms.html">Terms</a></li>
-            </ul>
+          </ul>
         </div>
 
         <div class="footer-column">
-            <h4>Calculators</h4>
-            <div class="footer-links-split">
+          <h4>Calculators</h4>
+          <div class="footer-links-split">
             <ul class="footer-links">
-                <li><a href="hourly-to-salary.html">Hourly to Salary</a></li>
-                <li><a href="salary-to-hourly.html">Salary to Hourly</a></li>
-                <li><a href="overtime-calculator.html">Overtime</a></li>
-                <li><a href="work-hours-calculator.html">Work Hours</a></li>
+              <li><a href="hourly-to-salary.html">Hourly to Salary</a></li>
+              <li><a href="salary-to-hourly.html">Salary to Hourly</a></li>
+              <li><a href="overtime-calculator.html">Overtime</a></li>
+              <li><a href="work-hours-calculator.html">Work Hours</a></li>
             </ul>
 
             <ul class="footer-links">
-                <li><a href="weekly-pay-calculator.html">Weekly Pay</a></li>
-                <li><a href="monthly-pay-calculator.html">Monthly Pay</a></li>
-                <li><a href="take-home-pay-calculator.html">Take-Home Pay</a></li>
-                <li><a href="budget-calculator.html">Budget Calculator</a></li>
+              <li><a href="weekly-pay-calculator.html">Weekly Pay</a></li>
+              <li><a href="monthly-pay-calculator.html">Monthly Pay</a></li>
+              <li><a href="take-home-pay-calculator.html">Take-Home Pay</a></li>
+              <li><a href="budget-calculator.html">Budget Calculator</a></li>
             </ul>
-            </div>
+          </div>
         </div>
-        </div>
+      </div>
 
-        <div class="footer-bottom">
+      <div class="footer-bottom">
         <p>© 2026 Work Pay Calculator. All rights reserved.</p>
-        </div>
+      </div>
     </div>
-    </footer>
+  </footer>
 
   <script src="budget-calculator.js"></script>
 </body>

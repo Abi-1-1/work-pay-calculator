@@ -1,31 +1,34 @@
-/* ===== Budget page ===== */
-.budget-page {
-  max-width: 860px;
-  margin: 48px auto 0;
-  padding: 0 16px 48px;
+.budget-section {
+  padding: 34px 0;
 }
 
-.budget-card {
-  background: rgba(255, 255, 255, 0.72);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+.budget-hero .hero-box {
+  align-items: stretch;
+}
+
+.budget-layout {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.budget-panel {
+  background: rgba(255, 255, 255, 0.74);
   border: 1px solid rgba(255, 255, 255, 0.55);
-  box-shadow: 0 12px 35px rgba(83, 109, 140, 0.12);
   border-radius: 24px;
+  box-shadow: 0 10px 24px rgba(93, 110, 170, 0.08);
+  backdrop-filter: blur(14px);
   padding: 28px;
-  margin-bottom: 24px;
 }
 
-.budget-card h1,
-.budget-card h2 {
-  margin-top: 0;
-  color: #1f2d3d;
+.budget-main-panel,
+.budget-side-panel {
+  height: 100%;
 }
 
-.budget-intro {
-  color: #556476;
-  line-height: 1.65;
-  margin-bottom: 22px;
+.section-heading-left {
+  text-align: left;
 }
 
 .budget-field {
@@ -42,12 +45,13 @@
 .budget-field input,
 .budget-field select {
   width: 100%;
-  padding: 12px 14px;
+  padding: 14px 16px;
   border-radius: 14px;
   border: 1px solid rgba(150, 170, 190, 0.35);
   background: rgba(255, 255, 255, 0.92);
   font-size: 15px;
   outline: none;
+  color: #1f2a44;
 }
 
 .budget-field input:focus,
@@ -59,7 +63,8 @@
 .budget-two-col,
 .budget-three-col,
 .budget-rule-grid,
-.budget-faq-grid {
+.budget-faq-grid,
+.budget-mini-info-grid {
   display: grid;
   gap: 14px;
 }
@@ -70,6 +75,49 @@
 
 .budget-three-col {
   grid-template-columns: repeat(3, 1fr);
+}
+
+.budget-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.budget-btn {
+  border: none;
+  border-radius: 16px;
+  padding: 14px 18px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #7db9ff, #91d4ff);
+  color: #17314d;
+  box-shadow: 0 8px 18px rgba(104, 164, 227, 0.25);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.budget-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(104, 164, 227, 0.3);
+}
+
+.budget-btn--secondary {
+  background: rgba(255, 255, 255, 0.92);
+  color: #223446;
+  border: 1px solid rgba(180, 200, 220, 0.35);
+  box-shadow: none;
+}
+
+.budget-btn--secondary:hover {
+  box-shadow: none;
+}
+
+.budget-note,
+.budget-summary-intro {
+  font-size: 14px;
+  color: #58687a;
+  line-height: 1.65;
 }
 
 .budget-summary-grid {
@@ -143,55 +191,8 @@
   color: #c0392b;
 }
 
-.budget-actions {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin-top: 8px;
-}
-
-.budget-btn {
-  border: none;
-  border-radius: 16px;
-  padding: 14px 18px;
-  cursor: pointer;
-  font-size: 15px;
-  font-weight: 700;
-  background: linear-gradient(135deg, #7db9ff, #91d4ff);
-  color: #17314d;
-  box-shadow: 0 8px 18px rgba(104, 164, 227, 0.25);
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
-}
-
-.budget-btn:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 10px 22px rgba(104, 164, 227, 0.3);
-}
-
-.budget-btn--secondary {
-  background: rgba(255, 255, 255, 0.92);
-  color: #223446;
-  border: 1px solid rgba(180, 200, 220, 0.35);
-  box-shadow: none;
-}
-
-.budget-btn--secondary:hover {
-  box-shadow: none;
-}
-
-.budget-note,
-.budget-summary-intro {
-  font-size: 14px;
-  color: #58687a;
-  line-height: 1.65;
-}
-
-.budget-summary-intro {
-  margin: -4px 0 18px;
-}
-
 .budget-section-title {
-  margin: 36px 0 16px;
+  margin: 30px 0 16px;
   font-size: 1.08rem;
   color: #223446;
 }
@@ -325,18 +326,23 @@
   margin-top: 14px;
 }
 
+.budget-info-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.budget-mini-info-grid {
+  display: grid;
+  gap: 14px;
+}
+
 .budget-info-card,
 .budget-faq-item,
 .budget-mini-card {
   padding: 18px;
   line-height: 1.65;
   color: #4f5f71;
-}
-
-.budget-info-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 14px;
 }
 
 .budget-info-card h4,
@@ -351,14 +357,6 @@
 .budget-mini-card p {
   margin: 0;
   font-size: 14px;
-}
-
-.budget-paragraph-gap {
-  margin-top: 12px;
-}
-
-.budget-faq-grid {
-  grid-template-columns: 1fr 1fr;
 }
 
 .budget-tips-list {
@@ -385,6 +383,10 @@
   text-decoration: underline;
 }
 
+.budget-faq-grid {
+  grid-template-columns: 1fr 1fr;
+}
+
 .budget-positive {
   color: #127a43;
 }
@@ -393,55 +395,56 @@
   color: #c0392b;
 }
 
-@media (max-width: 1050px) {
-  .budget-two-col,
-  .budget-three-col,
+.budget-steps-grid {
+  margin-bottom: 8px;
+}
+
+@media (max-width: 1100px) {
+  .budget-layout,
   .budget-summary-grid,
   .budget-rule-grid,
   .budget-info-grid,
   .budget-faq-grid,
-  .budget-mini-cards-grid {
+  .budget-mini-cards-grid,
+  .budget-three-col {
     grid-template-columns: 1fr 1fr;
   }
 
-  .site-header__inner {
-    flex-wrap: wrap;
-    padding-top: 10px;
-    padding-bottom: 10px;
+  .budget-layout {
+    align-items: stretch;
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 760px) {
+  .budget-layout,
   .budget-two-col,
   .budget-three-col,
   .budget-summary-grid,
   .budget-rule-grid,
   .budget-info-grid,
   .budget-faq-grid,
-  .budget-mini-cards-grid {
+  .budget-mini-cards-grid,
+  .budget-mini-info-grid {
     grid-template-columns: 1fr;
+  }
+
+  .budget-panel {
+    padding: 20px;
   }
 
   .budget-actions {
     flex-direction: column;
   }
 
-  .nav-links {
-    flex-wrap: wrap;
-    gap: 12px;
-  }
-
-  .dropdown-menu {
-    min-width: 190px;
+  .budget-btn {
+    width: 100%;
   }
 }
 
-.budget-info-grid,
-.budget-mini-cards-grid,
-.budget-faq-grid,
-.budget-table-wrap,
-.budget-progress-list,
-.budget-rule-wrap,
-.budget-info-card {
-  margin-bottom: 22px;
+.budget-related-cards {
+  margin-top: 8px;
+}
+
+.budget-related-cards .card {
+  height: 100%;
 }

@@ -3,48 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Monthly Pay Calculator | Work Pay Calculator</title>
-    <meta name="description" content="Estimate monthly pay before tax and after tax using hourly rate, weekly hours, and weeks per month.">
-    <meta name="keywords" content="monthly pay calculator, monthly income calculator, monthly salary calculator">
+    <title>Monthly Pay Calculator | Estimate Monthly Income Before and After Tax</title>
+    <meta name="description" content="Use this free Monthly Pay Calculator to estimate monthly income from salary, hourly pay, or weekly earnings. Calculate monthly pay before tax and after tax in seconds.">
+    <meta name="keywords" content="monthly pay calculator, monthly income calculator, monthly salary calculator, calculate monthly earnings, monthly paycheck calculator, monthly pay after tax">
     <meta name="author" content="Work Pay Calculator">
-    <link rel="canonical" href="https://abi-1-1.github.io/monthly-pay-calculator.html">
+    <link rel="canonical" href="https://abi-1-1.github.io/work-pay-calculator/monthly-pay-calculator.html">
 
-    <meta property="og:title" content="Monthly Pay Calculator">
-    <meta property="og:description" content="Estimate monthly pay before tax and after tax.">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://abi-1-1.github.io/monthly-pay-calculator.html">
+    <meta property="og:title" content="Monthly Pay Calculator | Estimate Monthly Income Before and After Tax">
+    <meta property="og:description" content="Free monthly pay calculator for estimating monthly income from salary, hourly pay, or weekly earnings.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://abi-1-1.github.io/work-pay-calculator/monthly-pay-calculator.html">
     <meta property="og:site_name" content="Work Pay Calculator">
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Monthly Pay Calculator">
-    <meta name="twitter:description" content="Estimate monthly pay before tax and after tax.">
+    <meta name="twitter:description" content="Estimate monthly income with this free calculator.">
+
+    <meta name="google-site-verification" content="kU5WNx88euEe9lSblEn7c-zo62_xEEezcfYsFqcPrnw" />
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4736461986844584"
-     crossorigin="anonymous"></script>
-     
+        crossorigin="anonymous"></script>
+
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
     <header class="site-header">
-        <div class="container">
+        <div class="container header-wrap">
             <a href="index.html" class="logo">Work Pay Calculator</a>
 
             <nav class="nav">
                 <a href="index.html">Home</a>
-
-                <a href="budget-calculator.html">Budget-Calculator</a>
+                <a href="budget-calculator.html">Budget Calculator</a>
 
                 <div class="dropdown">
                     <a href="#" class="dropdown-toggle">Calculators ▾</a>
                     <div class="dropdown-menu">
                         <a href="hourly-to-salary.html">Hourly to Salary</a>
                         <a href="salary-to-hourly.html">Salary to Hourly</a>
-                        <a href="overtime-calculator.html">Overtime</a>
+                        <a href="overtime-calculator.html">Overtime Pay</a>
                         <a href="work-hours-calculator.html">Work Hours</a>
                         <a href="weekly-pay-calculator.html">Weekly Pay</a>
-                        <a href="monthly-pay-calculator.html">Monthly Pay</a>
+                        <a class="active" href="monthly-pay-calculator.html">Monthly Pay</a>
                         <a href="take-home-pay-calculator.html">Take-Home Pay</a>
                     </div>
                 </div>
@@ -55,175 +56,381 @@
     </header>
 
     <main>
-        <section class="calculator-page">
+        <section class="hero hero-large">
             <div class="container">
-                <div class="calculator-box">
-                    <h1>Monthly Pay Calculator</h1>
-                    <p class="calculator-intro">
-                        Enter your hourly rate, weekly hours, weeks per month, and estimated tax rate
-                        to calculate your monthly pay before tax and after tax.
-                    </p>
+                <div class="hero-box hero-grid">
+                    <div class="hero-text">
+                        <span class="hero-badge">Free Monthly Income Tool</span>
+                        <h1>Monthly Pay Calculator</h1>
+                        <p>
+                            Estimate your monthly income in seconds using salary, hourly pay, or weekly earnings.
+                            This free Monthly Pay Calculator helps you understand how much you may earn each month
+                            for budgeting, bill planning, savings goals, and comparing income options in the USA.
+                        </p>
 
-                    <div class="form-group">
-                        <label for="monthlyHourlyRate">Hourly Rate ($)</label>
-                        <input type="number" id="monthlyHourlyRate" placeholder="Enter hourly rate">
+                        <div class="hero-actions">
+                            <a class="main-button" href="#calculator">Use the Calculator</a>
+                            <a class="secondary-button" href="budget-calculator.html">Plan Your Budget</a>
+                        </div>
+
+                        <div class="hero-points">
+                            <div class="hero-point">Estimate monthly income fast</div>
+                            <div class="hero-point">Works with salary, hourly, or weekly pay</div>
+                            <div class="hero-point">Useful for budgeting and planning</div>
+                        </div>
                     </div>
 
-                    <div class="form-group">
-                        <label for="monthlyHoursPerWeek">Hours Worked per Week</label>
-                        <input type="number" id="monthlyHoursPerWeek" placeholder="Enter weekly hours">
-                    </div>
+                    <div class="hero-side-card">
+                        <div class="mini-stat-card">
+                            <div class="mini-stat-label">What it does</div>
+                            <div class="mini-stat-title">Convert income to monthly pay</div>
+                            <p>Estimate monthly earnings from annual salary, hourly work, or weekly pay.</p>
+                        </div>
 
-                    <div class="form-group">
-                        <label for="weeksPerMonth">Weeks per Month</label>
-                        <input type="number" id="weeksPerMonth" placeholder="Enter weeks per month" value="4.33" step="0.01">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="monthlyTaxRate">Estimated Tax Rate for Your State/Area (%)</label>
-                        <input type="number" id="monthlyTaxRate" placeholder="Enter your tax rate" value="20">
-                        <p class="field-note">Enter your estimated tax rate based on your state or local area. This is only a simple estimate.</p>
-                    </div>
-
-                    <div class="button-row">
-                        <button id="monthlyCalculateButton">Calculate</button>
-                        <button type="button" class="secondary-action" id="resetMonthlyButton">Reset</button>
-                        <button type="button" class="secondary-action copy-action" id="copyMonthlyButton">Copy Result</button>
-                    </div>
-
-                    <div class="result-box">
-                        <h2>Results</h2>
-                        <p><strong>Monthly Pay (Before Tax):</strong> <span id="monthlyPayBeforeResult">$0.00</span></p>
-                        <p><strong>Monthly Pay (After Tax):</strong> <span id="monthlyPayAfterResult">$0.00</span></p>
+                        <div class="mini-stat-card">
+                            <div class="mini-stat-label">Helpful for</div>
+                            <div class="mini-stat-title">Bills and budgeting</div>
+                            <p>Understand monthly income to plan rent, savings, debt payments, and daily spending.</p>
+                        </div>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <div class="content-box calculator-content">
-                    <h2>How to calculate monthly pay</h2>
-                    <p>
-                        To estimate monthly pay, multiply your hourly rate by weekly hours and then by the average number of weeks in a month.
-                    </p>
+        <section class="container ad-section">
+            <div class="ad-placeholder">
+                Ad space placeholder — future ad block or featured content
+            </div>
+        </section>
 
-                    <p>
-                        To estimate monthly pay after tax, apply your estimated tax rate to your monthly gross pay.
-                    </p>
-
-                    <h2>Formula</h2>
-                    <p><strong>Hourly Rate × Weekly Hours × Weeks per Month = Monthly Pay</strong></p>
-
-                    <h2>Why use this calculator?</h2>
-                    <p>
-                        This calculator helps estimate monthly earnings for budgeting, job planning, and comparing income options.
-                    </p>
-
-                    <h2>Example</h2>
-                    <p>
-                        If you earn $20 per hour, work 40 hours per week, and use 4.33 weeks per month,
-                        your estimated monthly pay is about $3,464 before tax.
-                    </p>
-
-                    <h2>Who this calculator is for</h2>
-                    <p>
-                        This calculator is useful for monthly budgeting, job comparisons, financial planning,
-                        and estimating expected work income over a typical month.
-                    </p>
-
-                    <h2>Important limitations</h2>
-                    <p>
-                        This is a simplified estimate. Actual monthly income may differ because of taxes,
-                        unpaid time off, variable weekly hours, holidays, and payroll schedules.
-                    </p>
+        <section class="calculator-section" id="calculator">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>Calculate Monthly Pay</h2>
+                    <p>Choose income type and enter your values to estimate monthly earnings.</p>
                 </div>
 
-                <div class="ad-placeholder">
-                    Future ad space or sponsored calculator placement
+                <div class="calculator-card">
+                    <div class="calculator-grid">
+                        <div class="calculator-form">
+                            <div class="form-group">
+                                <label for="incomeType">Income Type</label>
+                                <select id="incomeType">
+                                    <option value="salary">Annual Salary</option>
+                                    <option value="hourly">Hourly Pay</option>
+                                    <option value="weekly">Weekly Pay</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="amount">Amount</label>
+                                <input type="number" id="amount" placeholder="Enter amount" min="0" step="0.01">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="hoursPerWeek">Hours per Week (for hourly pay)</label>
+                                <input type="number" id="hoursPerWeek" placeholder="Enter hours per week if using hourly pay" min="0" step="0.01">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="monthlyTaxRate">Tax Rate (%)</label>
+                                <input type="number" id="monthlyTaxRate" placeholder="Optional tax rate" min="0" max="100" step="0.01">
+                            </div>
+
+                            <button class="main-button calc-button">Calculate Monthly Pay</button>
+                        </div>
+
+                        <div class="calculator-result">
+                            <div class="result-box">
+                                <div class="result-label">Estimated Monthly Pay</div>
+                                <div class="result-value" id="monthlyPayResult">$0.00</div>
+                                <p id="monthlyResultDescription">
+                                    Your estimated monthly income will appear here.
+                                </p>
+                            </div>
+
+                            <div class="result-details">
+                                <div class="detail-row">
+                                    <span>Gross Monthly Pay</span>
+                                    <strong id="monthlyGrossDisplay">$0.00</strong>
+                                </div>
+                                <div class="detail-row">
+                                    <span>Estimated Taxes</span>
+                                    <strong id="monthlyTaxDisplay">$0.00</strong>
+                                </div>
+                                <div class="detail-row">
+                                    <span>Net Monthly Pay</span>
+                                    <strong id="monthlyNetDisplay">$0.00</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                
+            </div>
+        </section>
+
+        <section class="info-section">
+            <div class="container">
+                <div class="info-box">
+                    <h2>What Is Monthly Pay?</h2>
+                    <p>
+                        Monthly pay is the amount of money you earn in one month from salary, hourly work,
+                        or weekly income. It is one of the most useful ways to understand income because
+                        most major expenses such as rent, bills, loan payments, groceries, and savings goals
+                        are usually planned on a monthly basis.
+                    </p>
+                    <p>
+                        This calculator helps estimate monthly pay from several income types, giving you a clearer
+                        picture of how much money may come in each month before tax and after a simple tax estimate.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="info-section alt-section">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>How to Use This Monthly Pay Calculator</h2>
+                    <p>Use the calculator in three simple steps.</p>
                 </div>
 
-                <div class="related-section">
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <h3>Select your income type</h3>
+                        <p>Choose whether you want to calculate monthly pay from annual salary, hourly pay, or weekly income.</p>
+                    </div>
+
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <h3>Enter your income details</h3>
+                        <p>Add the amount and, if needed, your weekly work hours and optional tax rate.</p>
+                    </div>
+
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <h3>View monthly income results</h3>
+                        <p>See estimated gross monthly pay, taxes, and net monthly income in one place.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="formula-section">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>Monthly Pay Formulas</h2>
+                    <p>This calculator uses simple monthly income formulas.</p>
+                </div>
+
+                <div class="formula-card">
+                    <div class="formula-line">Monthly Pay = Annual Salary ÷ 12</div>
+                    <div class="formula-line">Monthly Pay = Weekly Pay × 52 ÷ 12</div>
+                    <div class="formula-line">Monthly Pay = Hourly Pay × Hours per Week × 52 ÷ 12</div>
+                    <div class="formula-line">Net Monthly Pay = Gross Monthly Pay − Estimated Taxes</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="examples-section">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>Examples of Monthly Pay</h2>
+                    <p>Here are a few common examples of monthly income estimates.</p>
+                </div>
+
+                <div class="examples-grid">
+                    <div class="example-card">
+                        <h3>Annual Salary Example</h3>
+                        <p><strong>Annual salary:</strong> $60,000</p>
+                        <p><strong>Gross monthly pay:</strong> $5,000</p>
+                        <p><strong>Tax rate:</strong> 12%</p>
+                        <p><strong>Net monthly pay:</strong> $4,400</p>
+                    </div>
+
+                    <div class="example-card">
+                        <h3>Hourly Pay Example</h3>
+                        <p><strong>Hourly pay:</strong> $20</p>
+                        <p><strong>Hours per week:</strong> 40</p>
+                        <p><strong>Gross monthly pay:</strong> about $3,466.67</p>
+                        <p><strong>Tax rate:</strong> 10%</p>
+                        <p><strong>Net monthly pay:</strong> about $3,120.00</p>
+                    </div>
+
+                    <div class="example-card">
+                        <h3>Weekly Pay Example</h3>
+                        <p><strong>Weekly pay:</strong> $900</p>
+                        <p><strong>Gross monthly pay:</strong> $3,900</p>
+                        <p><strong>Tax rate:</strong> 8%</p>
+                        <p><strong>Net monthly pay:</strong> $3,588</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="use-cases-section">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>Why Use a Monthly Pay Calculator?</h2>
+                    <p>This tool is useful for common income, paycheck, and budgeting questions.</p>
+                </div>
+
+                <div class="use-cases-grid">
+                    <div class="use-case-card">
+                        <h3>Build a monthly budget</h3>
+                        <p>Estimate monthly income to better plan rent, food, transportation, and savings goals.</p>
+                    </div>
+
+                    <div class="use-case-card">
+                        <h3>Compare job offers</h3>
+                        <p>See how different salary or hourly pay options affect the amount you earn each month.</p>
+                    </div>
+
+                    <div class="use-case-card">
+                        <h3>Understand your paycheck</h3>
+                        <p>Convert yearly, weekly, or hourly earnings into a clearer monthly view of income.</p>
+                    </div>
+
+                    <div class="use-case-card">
+                        <h3>Plan financial goals</h3>
+                        <p>Use monthly income estimates when deciding how much you can save, invest, or spend.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <div class="container">
+                <h2>Monthly Pay Calculator FAQ</h2>
+
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <h3>How do I calculate monthly income?</h3>
+                        <p>
+                            Monthly income can be estimated by dividing annual salary by 12, converting weekly pay
+                            using 52 weeks per year, or converting hourly pay using weekly hours.
+                        </p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>How much is $50,000 per year monthly?</h3>
+                        <p>
+                            $50,000 per year is about $4,166.67 per month before taxes.
+                        </p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>Can I use this calculator for hourly work?</h3>
+                        <p>
+                            Yes. Enter hourly pay and hours worked per week to estimate monthly income from hourly wages.
+                        </p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>Can I calculate monthly pay after tax?</h3>
+                        <p>
+                            Yes. This page includes an optional tax rate field so you can get a simple net monthly pay estimate.
+                        </p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>Is this calculator exact?</h3>
+                        <p>
+                            No. It gives a simplified estimate. Actual income, deductions, and taxes may vary by employer,
+                            state, schedule, and benefits.
+                        </p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>Why is monthly income important?</h3>
+                        <p>
+                            Monthly income is useful because many major financial decisions, bills, and savings goals
+                            are based on monthly cash flow.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="related-section">
+            <div class="container">
+                <div class="section-heading">
                     <h2>Related Calculators</h2>
-                    <div class="related-grid">
-                        <a class="related-card" href="hourly-to-salary.html">
-                            <h3>Hourly to Salary</h3>
-                            <p>Convert hourly pay into yearly, monthly, and weekly estimates.</p>
-                        </a>
-
-                        <a class="related-card" href="monthly-pay-calculator.html">
-                            <h3>Monthly Pay</h3>
-                            <p>Estimate monthly pay before tax and after tax.</p>
-                        </a>
-
-                        <a class="related-card" href="take-home-pay-calculator.html">
-                            <h3>Take-Home Pay</h3>
-                            <p>Estimate simple after-tax take-home income.</p>
-                        </a>
-                    </div>
+                    <p>Use these tools to estimate salary, paycheck, and budget details more clearly.</p>
                 </div>
 
-                <div class="faq-mini">
-                    <h2>Quick FAQ</h2>
+                <div class="cards cards-better">
+                    <a class="card card-link" href="weekly-pay-calculator.html">
+                        <span class="card-tag">Paycheck</span>
+                        <h3>Weekly Pay Calculator</h3>
+                        <p>Estimate weekly earnings before tax and after tax.</p>
+                    </a>
 
-                    <div class="faq-list">
-                        <div class="faq-item">
-                            <h3>Is this calculator free?</h3>
-                            <p>Yes. It is free to use.</p>
-                        </div>
+                    <a class="card card-link" href="salary-to-hourly.html">
+                        <span class="card-tag">Convert</span>
+                        <h3>Salary to Hourly Calculator</h3>
+                        <p>Convert annual salary into an estimated hourly wage.</p>
+                    </a>
 
-                        <div class="faq-item">
-                            <h3>Is the tax result exact?</h3>
-                            <p>No. It is a simple estimate based on the tax percentage you enter.</p>
-                        </div>
-                    </div>
+                    <a class="card card-link" href="take-home-pay-calculator.html">
+                        <span class="card-tag">Net Pay</span>
+                        <h3>Take-Home Pay Calculator</h3>
+                        <p>Estimate net pay after taxes using gross income and tax rate.</p>
+                    </a>
+
+                    <a class="card card-link" href="budget-calculator.html">
+                        <span class="card-tag">Budget</span>
+                        <h3>Budget Calculator</h3>
+                        <p>Plan expenses and savings using your estimated monthly income.</p>
+                    </a>
                 </div>
             </div>
         </section>
     </main>
 
     <footer class="site-footer">
-    <div class="footer-container">
-        <div class="footer-grid">
-        <div class="footer-column">
-            <h3>Work Pay Calculator</h3>
-            <p>Free salary and work calculators for the USA.</p>
-        </div>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Work Pay Calculator</h3>
+                    <p>Free salary, paycheck, and budget calculators for the USA.</p>
+                </div>
 
-        <div class="footer-column">
-            <h4>Pages</h4>
-            <ul class="footer-links">
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="privacy-policy.html">Privacy Policy</a></li>
-            <li><a href="terms.html">Terms</a></li>
-            </ul>
-        </div>
+                <div class="footer-column">
+                    <h4>Pages</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms</a></li>
+                    </ul>
+                </div>
 
-        <div class="footer-column">
-            <h4>Calculators</h4>
-            <div class="footer-links-split">
-            <ul class="footer-links">
-                <li><a href="hourly-to-salary.html">Hourly to Salary</a></li>
-                <li><a href="salary-to-hourly.html">Salary to Hourly</a></li>
-                <li><a href="overtime-calculator.html">Overtime</a></li>
-                <li><a href="work-hours-calculator.html">Work Hours</a></li>
-            </ul>
+                <div class="footer-column">
+                    <h4>Calculators</h4>
+                    <div class="footer-links-split">
+                        <ul class="footer-links">
+                            <li><a href="hourly-to-salary.html">Hourly to Salary</a></li>
+                            <li><a href="salary-to-hourly.html">Salary to Hourly</a></li>
+                            <li><a href="overtime-calculator.html">Overtime Pay</a></li>
+                            <li><a href="work-hours-calculator.html">Work Hours</a></li>
+                        </ul>
 
-            <ul class="footer-links">
-                <li><a href="weekly-pay-calculator.html">Weekly Pay</a></li>
-                <li><a href="monthly-pay-calculator.html">Monthly Pay</a></li>
-                <li><a href="take-home-pay-calculator.html">Take-Home Pay</a></li>
-                <li><a href="budget-calculator.html">Budget Calculator</a></li>
-            </ul>
+                        <ul class="footer-links">
+                            <li><a href="weekly-pay-calculator.html">Weekly Pay</a></li>
+                            <li><a href="monthly-pay-calculator.html">Monthly Pay</a></li>
+                            <li><a href="take-home-pay-calculator.html">Take-Home Pay</a></li>
+                            <li><a href="budget-calculator.html">Budget Calculator</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 Work Pay Calculator. All rights reserved.</p>
             </div>
         </div>
-        </div>
-
-        <div class="footer-bottom">
-        <p>© 2026 Work Pay Calculator. All rights reserved.</p>
-        </div>
-    </div>
     </footer>
-    
+
     <script src="js/main.js"></script>
-</body>
 </html>

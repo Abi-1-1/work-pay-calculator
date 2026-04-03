@@ -3,47 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weekly Pay Calculator | Work Pay Calculator</title>
-    <meta name="description" content="Calculate weekly pay before tax and after tax using hourly rate, weekly hours, and estimated tax rate.">
-    <meta name="keywords" content="weekly pay calculator, weekly paycheck calculator, weekly income calculator">
+    <title>Weekly Pay Calculator | Estimate Weekly Earnings Before and After Tax</title>
+    <meta name="description" content="Use this free Weekly Pay Calculator to estimate weekly earnings before tax and after tax. Calculate weekly income from hourly pay, hours worked, and tax rate in seconds.">
+    <meta name="keywords" content="weekly pay calculator, weekly income calculator, weekly earnings calculator, calculate weekly pay, weekly paycheck calculator, weekly pay after tax">
     <meta name="author" content="Work Pay Calculator">
-    <link rel="canonical" href="https://abi-1-1.github.io/weekly-pay-calculator.html">
+    <link rel="canonical" href="https://abi-1-1.github.io/work-pay-calculator/weekly-pay-calculator.html">
 
-    <meta property="og:title" content="Weekly Pay Calculator">
-    <meta property="og:description" content="Calculate weekly pay before tax and after tax.">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://abi-1-1.github.io/weekly-pay-calculator.html">
+    <meta property="og:title" content="Weekly Pay Calculator | Estimate Weekly Earnings Before and After Tax">
+    <meta property="og:description" content="Free online weekly pay calculator for estimating weekly earnings from hourly pay, weekly hours, and tax rate.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://abi-1-1.github.io/work-pay-calculator/weekly-pay-calculator.html">
     <meta property="og:site_name" content="Work Pay Calculator">
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Weekly Pay Calculator">
-    <meta name="twitter:description" content="Calculate weekly pay before tax and after tax.">
+    <meta name="twitter:description" content="Estimate weekly pay before and after tax with this free calculator.">
+
+    <meta name="google-site-verification" content="kU5WNx88euEe9lSblEn7c-zo62_xEEezcfYsFqcPrnw" />
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4736461986844584"
-     crossorigin="anonymous"></script>
-     
+        crossorigin="anonymous"></script>
+
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
     <header class="site-header">
-        <div class="container">
+        <div class="container header-wrap">
             <a href="index.html" class="logo">Work Pay Calculator</a>
 
             <nav class="nav">
                 <a href="index.html">Home</a>
-
-                <a href="budget-calculator.html">Budget-Calculator</a>
+                <a href="budget-calculator.html">Budget Calculator</a>
 
                 <div class="dropdown">
                     <a href="#" class="dropdown-toggle">Calculators ▾</a>
                     <div class="dropdown-menu">
                         <a href="hourly-to-salary.html">Hourly to Salary</a>
                         <a href="salary-to-hourly.html">Salary to Hourly</a>
-                        <a href="overtime-calculator.html">Overtime</a>
+                        <a href="overtime-calculator.html">Overtime Pay</a>
                         <a href="work-hours-calculator.html">Work Hours</a>
-                        <a href="weekly-pay-calculator.html">Weekly Pay</a>
+                        <a class="active" href="weekly-pay-calculator.html">Weekly Pay</a>
                         <a href="monthly-pay-calculator.html">Monthly Pay</a>
                         <a href="take-home-pay-calculator.html">Take-Home Pay</a>
                     </div>
@@ -55,168 +56,373 @@
     </header>
 
     <main>
-        <section class="calculator-page">
+        <section class="hero hero-large">
             <div class="container">
-                <div class="calculator-box">
-                    <h1>Weekly Pay Calculator</h1>
-                    <p class="calculator-intro">
-                        Enter your hourly rate, hours worked per week, and estimated tax rate
-                        to calculate your weekly pay before tax and after tax.
-                    </p>
+                <div class="hero-box hero-grid">
+                    <div class="hero-text">
+                        <span class="hero-badge">Free Weekly Earnings Tool</span>
+                        <h1>Weekly Pay Calculator</h1>
+                        <p>
+                            Estimate your weekly pay in seconds using hourly wage, hours worked per week,
+                            and an optional tax rate. This free Weekly Pay Calculator helps you understand
+                            gross weekly income and a simple after-tax estimate for budgeting, job planning,
+                            and paycheck comparisons in the USA.
+                        </p>
 
-                    <div class="form-group">
-                        <label for="weeklyHourlyRate">Hourly Rate ($)</label>
-                        <input type="number" id="weeklyHourlyRate" placeholder="Enter hourly rate">
+                        <div class="hero-actions">
+                            <a class="main-button" href="#calculator">Use the Calculator</a>
+                            <a class="secondary-button" href="take-home-pay-calculator.html">Estimate Net Pay</a>
+                        </div>
+
+                        <div class="hero-points">
+                            <div class="hero-point">Estimate gross weekly pay</div>
+                            <div class="hero-point">See a simple after-tax result</div>
+                            <div class="hero-point">Useful for work and budgeting</div>
+                        </div>
                     </div>
 
-                    <div class="form-group">
-                        <label for="weeklyHoursWorked">Hours Worked per Week</label>
-                        <input type="number" id="weeklyHoursWorked" placeholder="Enter weekly hours">
-                    </div>
+                    <div class="hero-side-card">
+                        <div class="mini-stat-card">
+                            <div class="mini-stat-label">What it does</div>
+                            <div class="mini-stat-title">Calculate weekly income</div>
+                            <p>Estimate how much you earn each week from hourly pay and weekly work hours.</p>
+                        </div>
 
-                    <div class="form-group">
-                        <label for="weeklyTaxRate">Estimated Tax Rate for Your State/Area (%)</label>
-                        <input type="number" id="weeklyTaxRate" placeholder="Enter your tax rate" value="20">
-                        <p class="field-note">Enter your estimated tax rate based on your state or local area. This is only a simple estimate.</p>
-                    </div>
-
-                    <div class="button-row">
-                        <button id="weeklyCalculateButton">Calculate</button>
-                        <button type="button" class="secondary-action" id="resetWeeklyButton">Reset</button>
-                        <button type="button" class="secondary-action copy-action" id="copyWeeklyButton">Copy Result</button>
-                    </div>
-
-                    <div class="result-box">
-                        <h2>Results</h2>
-                        <p><strong>Weekly Pay (Before Tax):</strong> <span id="weeklyPayBeforeResult">$0.00</span></p>
-                        <p><strong>Weekly Pay (After Tax):</strong> <span id="weeklyPayAfterResult">$0.00</span></p>
+                        <div class="mini-stat-card">
+                            <div class="mini-stat-label">Helpful for</div>
+                            <div class="mini-stat-title">Pay and budget planning</div>
+                            <p>Understand weekly earnings before tax and after tax for clearer financial planning.</p>
+                        </div>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <div class="content-box calculator-content">
-                    <h2>How to calculate weekly pay</h2>
-                    <p>
-                        To estimate weekly pay, multiply your hourly rate by the number of hours worked per week.
-                    </p>
+        <section class="container ad-section">
+            <div class="ad-placeholder">
+                Ad space placeholder — future ad block or featured content
+            </div>
+        </section>
 
-                    <p>
-                        To estimate weekly pay after tax, apply your estimated tax rate to your weekly gross pay.
-                    </p>
-
-                    <h2>Formula</h2>
-                    <p><strong>Hourly Rate × Hours Worked per Week = Weekly Pay</strong></p>
-
-                    <h2>Why use this calculator?</h2>
-                    <p>
-                        This calculator helps estimate weekly income, compare work schedules, and understand take-home pay more clearly.
-                    </p>
-
-                    <h2>Example</h2>
-                    <p>
-                        If you earn $20 per hour and work 40 hours in one week,
-                        your weekly pay is $800 before tax.
-                    </p>
-
-                    <h2>Who this calculator is for</h2>
-                    <p>
-                        This tool is useful for hourly workers, shift workers, part-time employees,
-                        and anyone who wants a quick estimate of weekly earnings.
-                    </p>
-
-                    <h2>Important limitations</h2>
-                    <p>
-                        This calculator gives a simple estimate only. It does not reflect actual payroll systems,
-                        tax withholding rules, deductions, or special overtime rules.
-                    </p>
-                </div>
-                
-                <div class="ad-placeholder">
-                    Future ad space or sponsored calculator placement
+        <section class="calculator-section" id="calculator">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>Calculate Your Weekly Pay</h2>
+                    <p>Enter hourly pay, hours worked per week, and tax rate to estimate weekly earnings.</p>
                 </div>
 
+                <div class="calculator-card">
+                    <div class="calculator-grid">
+                        <div class="calculator-form">
+                            <div class="form-group">
+                                <label for="hourlyRate">Hourly Pay</label>
+                                <input type="number" id="hourlyRate" placeholder="Enter hourly pay" min="0" step="0.01">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="weeklyHours">Hours per Week</label>
+                                <input type="number" id="weeklyHours" placeholder="Enter hours worked per week" min="0" step="0.01">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="weeklyTaxRate">Tax Rate (%)</label>
+                                <input type="number" id="weeklyTaxRate" placeholder="Enter tax rate" min="0" max="100" step="0.01">
+                            </div>
+
+                            <button class="main-button calc-button">Calculate Weekly Pay</button>
+                        </div>
+
+                        <div class="calculator-result">
+                            <div class="result-box">
+                                <div class="result-label">Estimated Weekly Pay</div>
+                                <div class="result-value" id="weeklyPayResult">$0.00</div>
+                                <p id="weeklyResultDescription">
+                                    Your estimated weekly pay will appear here.
+                                </p>
+                            </div>
+
+                            <div class="result-details">
+                                <div class="detail-row">
+                                    <span>Gross Weekly Pay</span>
+                                    <strong id="weeklyGrossDisplay">$0.00</strong>
+                                </div>
+                                <div class="detail-row">
+                                    <span>Estimated Taxes</span>
+                                    <strong id="weeklyTaxDisplay">$0.00</strong>
+                                </div>
+                                <div class="detail-row">
+                                    <span>Net Weekly Pay</span>
+                                    <strong id="weeklyNetDisplay">$0.00</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="info-section">
+            <div class="container">
+                <div class="info-box">
+                    <h2>What Is Weekly Pay?</h2>
+                    <p>
+                        Weekly pay is the amount of money you earn in one week of work. For hourly workers,
+                        weekly pay is usually calculated by multiplying hourly wage by the number of hours
+                        worked during the week.
+                    </p>
+                    <p>
+                        This calculator helps estimate gross weekly income and a simple after-tax weekly
+                        pay result. It is useful for part-time work, full-time jobs, side income planning,
+                        and paycheck comparisons.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="info-section alt-section">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>How to Use This Weekly Pay Calculator</h2>
+                    <p>Use the calculator in three simple steps.</p>
                 </div>
 
-                <div class="related-section">
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <h3>Enter your hourly pay</h3>
+                        <p>Type the amount you earn for each hour worked.</p>
+                    </div>
+
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <h3>Enter weekly hours and tax rate</h3>
+                        <p>Add how many hours you work per week and the tax percentage you want to estimate.</p>
+                    </div>
+
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <h3>View your weekly results</h3>
+                        <p>See gross weekly pay, estimated taxes, and net weekly pay in one place.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="formula-section">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>Weekly Pay Formula</h2>
+                    <p>This calculator uses simple weekly earnings formulas.</p>
+                </div>
+
+                <div class="formula-card">
+                    <div class="formula-line">Gross Weekly Pay = Hourly Pay × Hours per Week</div>
+                    <div class="formula-line">Estimated Taxes = Gross Weekly Pay × (Tax Rate ÷ 100)</div>
+                    <div class="formula-line">Net Weekly Pay = Gross Weekly Pay − Estimated Taxes</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="examples-section">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>Examples of Weekly Pay</h2>
+                    <p>Here are a few examples of weekly earnings before tax and after tax.</p>
+                </div>
+
+                <div class="examples-grid">
+                    <div class="example-card">
+                        <h3>Full-Time Example</h3>
+                        <p><strong>Hourly pay:</strong> $20</p>
+                        <p><strong>Hours per week:</strong> 40</p>
+                        <p><strong>Gross weekly pay:</strong> $800</p>
+                        <p><strong>Tax rate:</strong> 10%</p>
+                        <p><strong>Net weekly pay:</strong> $720</p>
+                    </div>
+
+                    <div class="example-card">
+                        <h3>Part-Time Example</h3>
+                        <p><strong>Hourly pay:</strong> $18</p>
+                        <p><strong>Hours per week:</strong> 25</p>
+                        <p><strong>Gross weekly pay:</strong> $450</p>
+                        <p><strong>Tax rate:</strong> 8%</p>
+                        <p><strong>Net weekly pay:</strong> $414</p>
+                    </div>
+
+                    <div class="example-card">
+                        <h3>Another Weekly Example</h3>
+                        <p><strong>Hourly pay:</strong> $30</p>
+                        <p><strong>Hours per week:</strong> 35</p>
+                        <p><strong>Gross weekly pay:</strong> $1,050</p>
+                        <p><strong>Tax rate:</strong> 12%</p>
+                        <p><strong>Net weekly pay:</strong> $924</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="use-cases-section">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>Why Use a Weekly Pay Calculator?</h2>
+                    <p>This tool helps with common income and paycheck questions.</p>
+                </div>
+
+                <div class="use-cases-grid">
+                    <div class="use-case-card">
+                        <h3>Estimate weekly earnings</h3>
+                        <p>Quickly calculate how much you may earn in one week from hourly work.</p>
+                    </div>
+
+                    <div class="use-case-card">
+                        <h3>Plan a budget</h3>
+                        <p>Use weekly net pay estimates to better manage bills, spending, and savings.</p>
+                    </div>
+
+                    <div class="use-case-card">
+                        <h3>Compare work schedules</h3>
+                        <p>See how different hourly rates or weekly hours affect your paycheck.</p>
+                    </div>
+
+                    <div class="use-case-card">
+                        <h3>Understand taxes</h3>
+                        <p>Get a simple idea of how tax percentages may change your weekly take-home pay.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <div class="container">
+                <h2>Weekly Pay Calculator FAQ</h2>
+
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <h3>How do I calculate weekly pay?</h3>
+                        <p>
+                            Weekly pay is usually calculated by multiplying hourly pay by hours worked per week.
+                            If you want net pay, subtract estimated taxes from gross weekly pay.
+                        </p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>How much is 40 hours a week at $20 per hour?</h3>
+                        <p>
+                            At $20 per hour for 40 hours, gross weekly pay is $800 before tax.
+                        </p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>Can I calculate weekly pay after tax?</h3>
+                        <p>
+                            Yes. This calculator includes a tax rate field so you can estimate net weekly pay after tax.
+                        </p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>Is this calculator exact?</h3>
+                        <p>
+                            No. This is a simplified estimate. Actual paycheck deductions may vary depending on taxes,
+                            benefits, state rules, and employer payroll details.
+                        </p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>Can I use this for part-time work?</h3>
+                        <p>
+                            Yes. You can enter any hourly rate and any number of weekly hours for part-time calculations.
+                        </p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>Why is weekly pay useful for budgeting?</h3>
+                        <p>
+                            Weekly pay gives you a shorter-term view of income, which can help with spending,
+                            saving, and planning regular expenses.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="related-section">
+            <div class="container">
+                <div class="section-heading">
                     <h2>Related Calculators</h2>
-                    <div class="related-grid">
-                        <a class="related-card" href="hourly-to-salary.html">
-                            <h3>Hourly to Salary</h3>
-                            <p>Convert hourly pay into yearly, monthly, and weekly estimates.</p>
-                        </a>
-
-                        <a class="related-card" href="monthly-pay-calculator.html">
-                            <h3>Monthly Pay</h3>
-                            <p>Estimate monthly pay before tax and after tax.</p>
-                        </a>
-
-                        <a class="related-card" href="take-home-pay-calculator.html">
-                            <h3>Take-Home Pay</h3>
-                            <p>Estimate simple after-tax take-home income.</p>
-                        </a>
-                    </div>
+                    <p>Use these tools to estimate salary, paycheck, and budget details more accurately.</p>
                 </div>
 
-                <div class="faq-mini">
-                    <h2>Quick FAQ</h2>
+                <div class="cards cards-better">
+                    <a class="card card-link" href="monthly-pay-calculator.html">
+                        <span class="card-tag">Paycheck</span>
+                        <h3>Monthly Pay Calculator</h3>
+                        <p>Estimate monthly income from salary, hourly wages, or weekly pay.</p>
+                    </a>
 
-                    <div class="faq-list">
-                        <div class="faq-item">
-                            <h3>Is this calculator free?</h3>
-                            <p>Yes. It is free to use.</p>
-                        </div>
+                    <a class="card card-link" href="take-home-pay-calculator.html">
+                        <span class="card-tag">Net Pay</span>
+                        <h3>Take-Home Pay Calculator</h3>
+                        <p>Estimate net pay after taxes using gross income and tax rate.</p>
+                    </a>
 
-                        <div class="faq-item">
-                            <h3>Is the tax result exact?</h3>
-                            <p>No. It is a simple estimate based on the tax percentage you enter.</p>
-                        </div>
-                    </div>
+                    <a class="card card-link" href="work-hours-calculator.html">
+                        <span class="card-tag">Hours</span>
+                        <h3>Work Hours Calculator</h3>
+                        <p>Calculate hours worked and estimate pay from your time and rate.</p>
+                    </a>
+
+                    <a class="card card-link" href="budget-calculator.html">
+                        <span class="card-tag">Budget</span>
+                        <h3>Budget Calculator</h3>
+                        <p>Plan expenses and savings using your income estimate.</p>
+                    </a>
                 </div>
             </div>
         </section>
     </main>
 
     <footer class="site-footer">
-    <div class="footer-container">
-        <div class="footer-grid">
-        <div class="footer-column">
-            <h3>Work Pay Calculator</h3>
-            <p>Free salary and work calculators for the USA.</p>
-        </div>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Work Pay Calculator</h3>
+                    <p>Free salary, paycheck, and budget calculators for the USA.</p>
+                </div>
 
-        <div class="footer-column">
-            <h4>Pages</h4>
-            <ul class="footer-links">
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="privacy-policy.html">Privacy Policy</a></li>
-            <li><a href="terms.html">Terms</a></li>
-            </ul>
-        </div>
+                <div class="footer-column">
+                    <h4>Pages</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms</a></li>
+                    </ul>
+                </div>
 
-        <div class="footer-column">
-            <h4>Calculators</h4>
-            <div class="footer-links-split">
-            <ul class="footer-links">
-                <li><a href="hourly-to-salary.html">Hourly to Salary</a></li>
-                <li><a href="salary-to-hourly.html">Salary to Hourly</a></li>
-                <li><a href="overtime-calculator.html">Overtime</a></li>
-                <li><a href="work-hours-calculator.html">Work Hours</a></li>
-            </ul>
+                <div class="footer-column">
+                    <h4>Calculators</h4>
+                    <div class="footer-links-split">
+                        <ul class="footer-links">
+                            <li><a href="hourly-to-salary.html">Hourly to Salary</a></li>
+                            <li><a href="salary-to-hourly.html">Salary to Hourly</a></li>
+                            <li><a href="overtime-calculator.html">Overtime Pay</a></li>
+                            <li><a href="work-hours-calculator.html">Work Hours</a></li>
+                        </ul>
 
-            <ul class="footer-links">
-                <li><a href="weekly-pay-calculator.html">Weekly Pay</a></li>
-                <li><a href="monthly-pay-calculator.html">Monthly Pay</a></li>
-                <li><a href="take-home-pay-calculator.html">Take-Home Pay</a></li>
-                <li><a href="budget-calculator.html">Budget Calculator</a></li>
-            </ul>
+                        <ul class="footer-links">
+                            <li><a href="weekly-pay-calculator.html">Weekly Pay</a></li>
+                            <li><a href="monthly-pay-calculator.html">Monthly Pay</a></li>
+                            <li><a href="take-home-pay-calculator.html">Take-Home Pay</a></li>
+                            <li><a href="budget-calculator.html">Budget Calculator</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 Work Pay Calculator. All rights reserved.</p>
             </div>
         </div>
-        </div>
-
-        <div class="footer-bottom">
-        <p>© 2026 Work Pay Calculator. All rights reserved.</p>
-        </div>
-    </div>
     </footer>
 
     <script src="js/main.js"></script>
